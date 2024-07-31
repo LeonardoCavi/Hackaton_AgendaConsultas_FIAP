@@ -10,7 +10,7 @@ namespace HealthMed.AgendaConsulta.Domain.Interfaces.Services
 {
     public interface IMedicoService
     {
-        Task<object> Autenticar(Credencial credencial);
+        Task<TokenAcesso> Autenticar(Credencial credencial);
         Task Cadastrar(Medico medico);
         Task EditarExpediente(int id, HorarioExpediente horarioExpediente);
     }

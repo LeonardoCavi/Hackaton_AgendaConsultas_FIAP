@@ -1,21 +1,32 @@
 ﻿using HealthMed.AgendaConsulta.Domain.Entities;
+using HealthMed.AgendaConsulta.Domain.Entities.Enums;
 using HealthMed.AgendaConsulta.Domain.Entities.ValueObject;
 using HealthMed.AgendaConsulta.Domain.Interfaces.Notifications;
 using HealthMed.AgendaConsulta.Domain.Interfaces.Repositories;
 using HealthMed.AgendaConsulta.Domain.Interfaces.Services;
+using HealthMed.AgendaConsulta.Domain.Notifications;
 using HealthMed.AgendaConsulta.Domain.Notifications.Abstract;
 
 namespace HealthMed.AgendaConsulta.Domain.Services
 {
-    public class PacienteService(IPacienteRepository repository,
-                                   INotificador notificador) : NotificadorContext(notificador), IPacienteService
+    public class PacienteService(ITokenService tokenService,
+                                 IPacienteRepository repository,
+                                 INotificador notificador) : NotificadorContext(notificador), IPacienteService
     {
-        public Task<string> AgendarConsulta(Consulta consulta)
+        public async Task<TokenAcesso> Autenticar(Credencial credencial)
         {
-            throw new NotImplementedException();
+            var paciente = await repository.Autenticar(credencial);
+
+            if (paciente is null)
+            {
+                Notificar($"Autenticar: usuário e/ou senha incorretos", TipoNotificacao.Unauthorized);
+                return null;
+            }
+
+            return tokenService.GerarToken(paciente.Nome, TipoCredencial.Paciente);
         }
 
-        public Task<object> Autenticar(Credencial credencial)
+        public Task<string> AgendarConsulta(Consulta consulta)
         {
             throw new NotImplementedException();
         }

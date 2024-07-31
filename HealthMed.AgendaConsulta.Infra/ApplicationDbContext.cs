@@ -11,7 +11,7 @@ namespace HealthMed.AgendaConsulta.Infra
         }
 
         public DbSet<Medico> Medicos { get; set; }
-        public DbSet<Paciente> Eventos { get; set; }
+        public DbSet<Paciente> Pacientes { get; set; }
         public DbSet<Consulta> Usuarios { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

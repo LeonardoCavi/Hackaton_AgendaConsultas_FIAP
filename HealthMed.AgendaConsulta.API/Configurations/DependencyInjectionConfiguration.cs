@@ -20,6 +20,7 @@ namespace HealthMed.AgendaConsulta.API.Configurations
             //Services
             services.AddScoped<IMedicoService, MedicoService>();
             services.AddScoped<IPacienteService, PacienteService>();
+            services.AddScoped<ITokenService, TokenService>();
 
             //Application Services
             services.AddScoped<IMedicoApplicationService, MedicoApplicationService>();
