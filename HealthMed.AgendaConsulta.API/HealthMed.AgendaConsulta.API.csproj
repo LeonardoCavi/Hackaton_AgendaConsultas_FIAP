@@ -17,11 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-    <Folder Include="Mappers\" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <ProjectReference Include="..\HealthMed.AgendaConsulta.Application\HealthMed.AgendaConsulta.Application.csproj" />
     <ProjectReference Include="..\HealthMed.AgendaConsulta.Infra\HealthMed.AgendaConsulta.Infra.csproj" />
   </ItemGroup>
 
