@@ -61,7 +61,7 @@ namespace HealthMed.AgendaConsulta.API.Controllers
 
         [Authorize]
         [HttpPut("{id}/editar-expediente")]
-        public async Task<IActionResult> EditarExpediente([FromQuery] int id, EditaExpedienteViewModel editaExpediente)
+        public async Task<IActionResult> EditarExpediente(int id, EditaExpedienteViewModel editaExpediente)
         {
             try
             {

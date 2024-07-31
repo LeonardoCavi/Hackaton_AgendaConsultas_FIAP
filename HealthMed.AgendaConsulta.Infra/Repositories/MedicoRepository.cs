@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace HealthMed.AgendaConsulta.Infra.Repositories
 {
-    internal class MedicoRepository : EntidadeBaseRepository<Medico>, IMedicoRepository
+    public class MedicoRepository : EntidadeBaseRepository<Medico>, IMedicoRepository
     {
         public MedicoRepository(ApplicationDbContext context) : base(context)
         {

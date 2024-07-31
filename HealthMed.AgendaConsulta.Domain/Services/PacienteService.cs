@@ -7,7 +7,7 @@ using HealthMed.AgendaConsulta.Domain.Notifications.Abstract;
 
 namespace HealthMed.AgendaConsulta.Domain.Services
 {
-    internal class PacienteService(IPacienteRepository repository,
+    public class PacienteService(IPacienteRepository repository,
                                    INotificador notificador) : NotificadorContext(notificador), IPacienteService
     {
         public Task<string> AgendarConsulta(Consulta consulta)
