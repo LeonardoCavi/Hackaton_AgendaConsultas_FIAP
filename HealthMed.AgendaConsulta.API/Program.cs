@@ -1,5 +1,4 @@
 using HealthMed.AgendaConsulta.API.Configurations;
-using HealthMed.AgendaConsulta.API.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 

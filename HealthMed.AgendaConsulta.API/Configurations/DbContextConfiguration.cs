@@ -1,7 +1,7 @@
 ﻿using HealthMed.AgendaConsulta.Infra;
 using Microsoft.EntityFrameworkCore;
 
-namespace HealthMed.AgendaConsulta.API.Extensions
+namespace HealthMed.AgendaConsulta.API.Configurations
 {
     public static class DbContextConfiguration
     {

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HealthMed.AgendaConsulta.Domain.Entities.Parameters
 {
-    public class AuthenticationParameter
+    public class AuthenticationParameters
     {
         public string SecretKey { get; set; }
         public int ExpiresInHours { get; set; }

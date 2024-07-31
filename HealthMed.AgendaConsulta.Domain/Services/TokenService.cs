@@ -9,7 +9,7 @@ using System.Text;
 
 namespace HealthMed.AgendaConsulta.Domain.Services
 {
-    public class TokenService(AuthenticationParameter parameter) : ITokenService
+    public class TokenService(AuthenticationParameters parameter) : ITokenService
     {
         public TokenAcesso GerarToken(string usuario, TipoCredencial tipoCredencial)
         {
