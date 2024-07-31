@@ -9,7 +9,10 @@ namespace HealthMed.AgendaConsulta.API.Configurations
         public static void AddAutenticationConfiguration(this IServiceCollection services,
                                                                IConfiguration configuration)
         {
-            var key = Encoding.ASCII.GetBytes(configuration.GetValue<string>("Secret"));
+            var secretKey = configuration
+                .GetRequiredSection("Authentication")["SecretKey"] ?? string.Empty;
+
+            var key = Encoding.ASCII.GetBytes(secretKey);
 
             services.AddAuthentication(a =>
             {

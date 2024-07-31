@@ -16,7 +16,7 @@ namespace HealthMed.AgendaConsulta.Application.Services
                                           IMedicoService service,
                                           INotificador notificador) : NotificadorContext(notificador), IMedicoApplicationService
     {
-        public async Task<object> AutenticarMedico(AutenticacaoViewModel autenticacao)
+        public async Task<TokenAcesso> AutenticarMedico(AutenticacaoViewModel autenticacao)
         {
             ExecutarValidacao(new AutenticacaoValidation(), autenticacao);
 

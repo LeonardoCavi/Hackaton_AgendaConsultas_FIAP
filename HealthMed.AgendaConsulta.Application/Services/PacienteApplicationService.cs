@@ -16,7 +16,7 @@ namespace HealthMed.AgendaConsulta.Application.Services
                                            IPacienteService service,
                                            INotificador notificador) : NotificadorContext(notificador), IPacienteApplicationService
     {
-        public async Task<object> AutenticarPaciente(AutenticacaoViewModel autenticacao)
+        public async Task<TokenAcesso> AutenticarPaciente(AutenticacaoViewModel autenticacao)
         {
             ExecutarValidacao(new AutenticacaoValidation(), autenticacao);
 

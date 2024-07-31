@@ -9,6 +9,7 @@ namespace HealthMed.AgendaConsulta.API.Configurations
         public static void AddParameters(this IServiceCollection services,
                                          IConfiguration configuration)
         {
+            services.AddScoped(x => configuration.GetRequiredSection("Authentication").Get<AuthenticationParameters>());
             services.AddScoped(x => configuration.GetRequiredSection("AzureCommunicationService").Get<AzureComunicationServiceParameters>());
         }
     }
