@@ -1,6 +1,7 @@
 ﻿using HealthMed.AgendaConsulta.Domain.Entities;
 using HealthMed.AgendaConsulta.Domain.Interfaces.Repositories;
 using Microsoft.EntityFrameworkCore;
+using System.Linq.Expressions;
 
 namespace HealthMed.AgendaConsulta.Infra.Repositories
 {

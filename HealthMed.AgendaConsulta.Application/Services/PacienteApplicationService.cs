@@ -40,28 +40,30 @@ namespace HealthMed.AgendaConsulta.Application.Services
             await service.Cadastrar(pacienteMap);
         }
 
-        public async Task<List<BuscaMedicoViewModel>> BuscarMedicos(DateTime inicio, DateTime fim)
+        public async Task<List<BuscaMedicoViewModel>> BuscarMedicos(DateTime dia)
         {
-            ExecutarValidacao(new BuscaMedicosValidation(), (inicio, fim));
+            ExecutarValidacao(new BuscaMedicosValidation(), dia);
 
             var medicos = new List<BuscaMedicoViewModel>();
 
             if (!notificador.TemNotificacao())
             {
-                var retorno = await service.BuscarMedicos(inicio, fim);
+                var retorno = await service.BuscarMedicos(dia);
                 medicos.AddRange(mapper.Map<List<BuscaMedicoViewModel>>(retorno));
             }
 
             return medicos;
         }
 
-        public async Task<string> AgendarConsulta(AgendaConsultaViewModel agendaConsulta)
+        public async Task<string> AgendarConsulta(int id, AgendaConsultaViewModel agendaConsulta)
         {
             ExecutarValidacao(new AgendaConsultaValidation(), agendaConsulta);
 
             if (!notificador.TemNotificacao())
             {
                 var consultaMap = mapper.Map<Consulta>(agendaConsulta);
+                consultaMap.PacienteId = id;
+
                 return await service.AgendarConsulta(consultaMap);
             }
 

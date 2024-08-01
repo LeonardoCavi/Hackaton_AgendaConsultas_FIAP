@@ -35,6 +35,13 @@ namespace HealthMed.AgendaConsulta.Domain.Notifications.Abstract
             Notificar(validator);
         }
 
+        protected void ExecutarValidacao<TV>(TV validacao, DateTime dia) where TV : AbstractValidator<DateTime>
+        {
+            var validator = validacao.Validate(dia);
+
+            Notificar(validator);
+        }
+
         protected void ExecutarValidacao<TV>(TV validacao, (int, int) ids) where TV : AbstractValidator<(int, int)>
         {
             var validator = validacao.Validate(ids);

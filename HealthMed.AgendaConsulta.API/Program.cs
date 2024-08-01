@@ -11,6 +11,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddDbContextConfiguration(builder.Configuration);
 builder.Services.AddParameters(builder.Configuration);
+builder.Services.AddAutenticationConfiguration(builder.Configuration);
 builder.Services.AddDependencyInjection();
 builder.Services.AddSwaggerConfiguration();
 

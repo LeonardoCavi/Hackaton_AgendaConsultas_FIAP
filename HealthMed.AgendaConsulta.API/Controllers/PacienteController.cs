@@ -36,7 +36,6 @@ namespace HealthMed.AgendaConsulta.API.Controllers
             }
         }
 
-        [Authorize]
         [HttpPost("cadastrar")]
         public async Task<IActionResult> Cadastrar(CadastraPacienteViewModel paciente)
         {
@@ -59,13 +58,13 @@ namespace HealthMed.AgendaConsulta.API.Controllers
             }
         }
 
-        [Authorize]
+        [Authorize(Roles = "Paciente")]
         [HttpGet("buscar-medicos")]
-        public async Task<IActionResult> BuscarMedicos(DateTime inicio, DateTime fim)
+        public async Task<IActionResult> BuscarMedicos(DateTime dia)
         {
             try
             {
-                var retorno = await applicationService.BuscarMedicos(inicio, fim);
+                var retorno = await applicationService.BuscarMedicos(dia);
 
                 if (notificador.TemNotificacao())
                 {
@@ -82,13 +81,13 @@ namespace HealthMed.AgendaConsulta.API.Controllers
             }
         }
 
-        [Authorize]
+        [Authorize(Roles = "Paciente")]
         [HttpPost("{id}/agendar-consulta")]
-        public async Task<IActionResult> AgendarConsulta(AgendaConsultaViewModel agendaConsulta)
+        public async Task<IActionResult> AgendarConsulta(int id, AgendaConsultaViewModel agendaConsulta)
         {
             try
             {
-                var retorno = await applicationService.AgendarConsulta(agendaConsulta);
+                var retorno = await applicationService.AgendarConsulta(id, agendaConsulta);
 
                 if (notificador.TemNotificacao())
                 {

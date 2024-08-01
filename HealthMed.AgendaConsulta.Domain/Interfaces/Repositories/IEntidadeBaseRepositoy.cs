@@ -1,4 +1,5 @@
 ﻿using HealthMed.AgendaConsulta.Domain.Entities;
+using System.Linq.Expressions;
 
 namespace HealthMed.AgendaConsulta.Domain.Interfaces.Repositories
 {

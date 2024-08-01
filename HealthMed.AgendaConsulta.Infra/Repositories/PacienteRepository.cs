@@ -2,6 +2,7 @@
 using HealthMed.AgendaConsulta.Domain.Entities.ValueObject;
 using HealthMed.AgendaConsulta.Domain.Interfaces.Repositories;
 using Microsoft.EntityFrameworkCore;
+using System.Linq.Expressions;
 
 namespace HealthMed.AgendaConsulta.Infra.Repositories
 {
@@ -17,6 +18,14 @@ namespace HealthMed.AgendaConsulta.Infra.Repositories
                 .Include(m => m.Credencial)
                 .Where(m => m.Credencial.Email == credencial.Email && m.Credencial.Senha == credencial.Senha)
                 .FirstOrDefaultAsync();
+        }
+
+        public async Task<ICollection<Paciente>> ObterPor(Expression<Func<Paciente, bool>> predicate)
+        {
+            return await _dBSet
+                .Include(x => x.Credencial)
+                .Where(predicate)
+                .ToListAsync();
         }
     }
 }

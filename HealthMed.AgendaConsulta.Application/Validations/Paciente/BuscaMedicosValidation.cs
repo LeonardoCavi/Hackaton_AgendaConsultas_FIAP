@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace HealthMed.AgendaConsulta.Application.Validations.Paciente
 {
-    public class BuscaMedicosValidation: AbstractValidator<(DateTime Inicio, DateTime Fim)>
+    public class BuscaMedicosValidation: AbstractValidator<DateTime>
     {
         public BuscaMedicosValidation()
         {
-            RuleFor(busca => busca.Inicio)
-                .GreaterThan(busca => busca.Fim)
-                .WithMessage("Inicio: o campo Inicio não pode ser maior que o campo Fim");
+            RuleFor(dia => dia)
+                .GreaterThan(DateTime.MinValue)
+                .WithMessage("Dia: a data informada não é uma data válida");
         }
     }
 }
