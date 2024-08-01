@@ -26,14 +26,34 @@ namespace HealthMed.AgendaConsulta.Domain.Services
             return tokenService.GerarToken(medico.Nome, TipoCredencial.Medico);
         }
 
-        public Task Cadastrar(Medico medico)
+        public async Task Cadastrar(Medico medico)
         {
-            throw new NotImplementedException();
+            var medicoDb = await repository.ObterPor(m => 
+                m.NumeroCRM == medico.NumeroCRM ||
+                m.CPF == medico.CPF ||
+                m.Credencial.Email == medico.Credencial.Email);
+
+            if (medicoDb.Count > 0)
+            {
+                Notificar("CPF e/ou Email e/ou CRM já cadastrados na base.", TipoNotificacao.Validation);
+                return;
+            }
+
+            await repository.Inserir(medico);
         }
 
-        public Task EditarExpediente(int id, HorarioExpediente horarioExpediente)
+        public async Task EditarExpediente(int id, HorarioExpediente horarioExpediente)
         {
-            throw new NotImplementedException();
+            var medicoDb = await repository.Obter(id);
+
+            if (medicoDb is null)
+            {
+                Notificar("Médico não cadastrado na base.", TipoNotificacao.Validation);
+                return;
+            }
+
+            medicoDb.HorarioExpediente = horarioExpediente;
+            await repository.Atualizar(medicoDb);
         }
     }
 }
