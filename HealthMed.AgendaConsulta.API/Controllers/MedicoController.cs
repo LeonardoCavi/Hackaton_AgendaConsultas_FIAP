@@ -36,7 +36,6 @@ namespace HealthMed.AgendaConsulta.API.Controllers
             }
         }
 
-        [Authorize]
         [HttpPost("cadastrar")]
         public async Task<IActionResult> Cadastrar(CadastraMedicoViewModel medico)
         {
@@ -50,7 +49,7 @@ namespace HealthMed.AgendaConsulta.API.Controllers
                     return StatusCode(resposta.StatusCode, resposta);
                 }
 
-                return Created();
+                return Created("", "Médico cadastrado com sucesso!");
             }
             catch (Exception ex)
             {
@@ -59,7 +58,7 @@ namespace HealthMed.AgendaConsulta.API.Controllers
             }
         }
 
-        [Authorize]
+        [Authorize(Roles = "Medico")]
         [HttpPut("{id}/editar-expediente")]
         public async Task<IActionResult> EditarExpediente(int id, EditaExpedienteViewModel editaExpediente)
         {

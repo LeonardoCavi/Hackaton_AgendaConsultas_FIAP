@@ -8,31 +8,38 @@ namespace HealthMed.AgendaConsulta.Application.Validations.Medico
         public EditaExpedienteValidation()
         {
             RuleFor(e => e.InicioDomingo)
-                .GreaterThan(e => e.FimDomingo)
+                .LessThan(e => e.FimDomingo)
+                .When(e => e.TrabalhaDomingo)
                 .WithMessage("{PropertyPath}: o campo {PropertyName} não pode ser maior que o campo {ComparisonProperty}");
 
             RuleFor(e => e.InicioSegunda)
-                .GreaterThan(e => e.FimSegunda)
+                .LessThan(e => e.FimSegunda)
+                .When(e => e.TrabalhaSegunda)
                 .WithMessage("{PropertyPath}: o campo {PropertyName} não pode ser maior que o campo {ComparisonProperty}");
 
             RuleFor(e => e.InicioTerca)
-                .GreaterThan(e => e.FimTerca)
+                .LessThan(e => e.FimTerca)
+                .When(e => e.TrabalhaTerca)
                 .WithMessage("{PropertyPath}: o campo {PropertyName} não pode ser maior que o campo {ComparisonProperty}");
 
             RuleFor(e => e.InicioQuarta)
-                .GreaterThan(e => e.FimQuarta)
+                .LessThan(e => e.FimQuarta)
+                .When(e => e.TrabalhaQuarta)
                 .WithMessage("{PropertyPath}: o campo {PropertyName} não pode ser maior que o campo {ComparisonProperty}");
 
             RuleFor(e => e.InicioQuinta)
-                .GreaterThan(e => e.FimQuinta)
+                .LessThan(e => e.FimQuinta)
+                .When(e => e.TrabalhaQuinta)
                 .WithMessage("{PropertyPath}: o campo {PropertyName} não pode ser maior que o campo {ComparisonProperty}");
 
             RuleFor(e => e.InicioSexta)
-                .GreaterThan(e => e.FimSexta)
+                .LessThan(e => e.FimSexta)
+                .When(e => e.TrabalhaSexta)
                 .WithMessage("{PropertyPath}: o campo {PropertyName} não pode ser maior que o campo {ComparisonProperty}");
 
             RuleFor(e => e.InicioSabado)
-                .GreaterThan(e => e.FimSabado)
+                .LessThan(e => e.FimSabado)
+                .When(e => e.TrabalhaSabado)
                 .WithMessage("{PropertyPath}: o campo {PropertyName} não pode ser maior que o campo {ComparisonProperty}");
         }
     }

@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Diagnostics.CodeAnalysis;
 
 namespace HealthMed.AgendaConsulta.Application.ViewModels.Medico
 {
+    [ExcludeFromCodeCoverage]
     public class CadastraMedicoViewModel
     {
         public string Nome { get; set; }
