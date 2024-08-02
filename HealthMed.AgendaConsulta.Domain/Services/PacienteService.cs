@@ -48,7 +48,7 @@ namespace HealthMed.AgendaConsulta.Domain.Services
             var medicos = await medicoRepository.ObterPorDiaTrabalhado(dia.DayOfWeek);
 
             var medicosSemConsultas = medicos.Where(x => !x.Consultas.Any());
-            
+
             var medicosComConsultas = medicos.Where(x => x.Consultas.Any());
 
             return null;

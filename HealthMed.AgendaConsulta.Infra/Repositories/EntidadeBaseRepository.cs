@@ -1,10 +1,11 @@
 ﻿using HealthMed.AgendaConsulta.Domain.Entities;
 using HealthMed.AgendaConsulta.Domain.Interfaces.Repositories;
 using Microsoft.EntityFrameworkCore;
-using System.Linq.Expressions;
+using System.Diagnostics.CodeAnalysis;
 
 namespace HealthMed.AgendaConsulta.Infra.Repositories
 {
+    [ExcludeFromCodeCoverage]
     public class EntidadeBaseRepository<TEntidade> : IEntidadeBaseRepository<TEntidade> where TEntidade : EntidadeBase
     {
         protected readonly ApplicationDbContext _context;

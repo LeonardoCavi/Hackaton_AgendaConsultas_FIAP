@@ -24,84 +24,6 @@ BRH:0
 FNF:1
 FNH:0
 end_of_record
-SF:D:\Hackaton_AgendaConsultas_FIAP\HealthMed.AgendaConsulta.API\Mappers\ErroProfile.cs
-FN:9,System.Void HealthMed.AgendaConsulta.API.Mappers.ErroProfile::.ctor()
-FNDA:9,System.Void HealthMed.AgendaConsulta.API.Mappers.ErroProfile::.ctor()
-DA:10,9
-DA:11,9
-DA:12,9
-DA:13,9
-DA:14,9
-DA:15,9
-DA:16,18
-DA:18,9
-DA:19,9
-DA:20,9
-DA:21,9
-DA:22,18
-DA:23,9
-FN:28,System.Int32 HealthMed.AgendaConsulta.API.Mappers.ErroMappingStatusCode::Resolve(System.Collections.Generic.IEnumerable`1<HealthMed.AgendaConsulta.Domain.Notifications.Notificacao>,HealthMed.AgendaConsulta.Application.ViewModels.ErroViewModel,System.Int32,AutoMapper.ResolutionContext)
-FNDA:3,System.Int32 HealthMed.AgendaConsulta.API.Mappers.ErroMappingStatusCode::Resolve(System.Collections.Generic.IEnumerable`1<HealthMed.AgendaConsulta.Domain.Notifications.Notificacao>,HealthMed.AgendaConsulta.Application.ViewModels.ErroViewModel,System.Int32,AutoMapper.ResolutionContext)
-DA:29,3
-DA:30,3
-DA:32,3
-DA:35,3
-DA:37,0
-DA:39,0
-DA:41,0
-DA:43,3
-BRDA:32,18,1,3
-BRDA:32,18,2,0
-BRDA:32,18,3,0
-BRDA:32,18,0,0
-LF:21
-LH:18
-BRF:4
-BRH:1
-FNF:2
-FNH:2
-end_of_record
-SF:D:\Hackaton_AgendaConsultas_FIAP\HealthMed.AgendaConsulta.API\Mappers\MedicoProfile.cs
-FN:10,System.Void HealthMed.AgendaConsulta.API.Mappers.MedicoProfile::.ctor()
-FNDA:9,System.Void HealthMed.AgendaConsulta.API.Mappers.MedicoProfile::.ctor()
-DA:11,9
-DA:12,9
-DA:13,9
-DA:15,9
-DA:16,9
-DA:17,9
-DA:18,9
-DA:19,9
-DA:20,9
-DA:22,9
-DA:23,9
-LF:11
-LH:11
-BRF:0
-BRH:0
-FNF:1
-FNH:1
-end_of_record
-SF:D:\Hackaton_AgendaConsultas_FIAP\HealthMed.AgendaConsulta.API\Mappers\PacienteProfile.cs
-FN:8,System.Void HealthMed.AgendaConsulta.API.Mappers.PacienteProfile::.ctor()
-FNDA:9,System.Void HealthMed.AgendaConsulta.API.Mappers.PacienteProfile::.ctor()
-DA:9,9
-DA:10,9
-DA:11,9
-DA:12,9
-DA:13,9
-DA:14,9
-DA:15,9
-DA:16,9
-DA:18,9
-DA:19,9
-LF:10
-LH:10
-BRF:0
-BRH:0
-FNF:1
-FNH:1
-end_of_record
 SF:D:\Hackaton_AgendaConsultas_FIAP\HealthMed.AgendaConsulta.API\Controllers\MedicoController.cs
 FN:12,System.Void HealthMed.AgendaConsulta.API.Controllers.MedicoController::.ctor(AutoMapper.IMapper,HealthMed.AgendaConsulta.Application.Services.Interface.IMedicoApplicationService,HealthMed.AgendaConsulta.Domain.Interfaces.Notifications.INotificador)
 FNDA:9,System.Void HealthMed.AgendaConsulta.API.Controllers.MedicoController::.ctor(AutoMapper.IMapper,HealthMed.AgendaConsulta.Application.Services.Interface.IMedicoApplicationService,HealthMed.AgendaConsulta.Domain.Interfaces.Notifications.INotificador)
@@ -248,12 +170,12 @@ FNF:5
 FNH:0
 end_of_record
 SF:D:\Hackaton_AgendaConsultas_FIAP\HealthMed.AgendaConsulta.Application\ViewModels\AutenticacaoViewModel.cs
-FN:10,System.String HealthMed.AgendaConsulta.Application.ViewModels.AutenticacaoViewModel::get_Email()
-FNDA:3,System.String HealthMed.AgendaConsulta.Application.ViewModels.AutenticacaoViewModel::get_Email()
-DA:11,3
-FN:11,System.String HealthMed.AgendaConsulta.Application.ViewModels.AutenticacaoViewModel::get_Senha()
-FNDA:3,System.String HealthMed.AgendaConsulta.Application.ViewModels.AutenticacaoViewModel::get_Senha()
-DA:12,3
+FN:4,System.String HealthMed.AgendaConsulta.Application.ViewModels.AutenticacaoViewModel::get_Email()
+FNDA:8,System.String HealthMed.AgendaConsulta.Application.ViewModels.AutenticacaoViewModel::get_Email()
+DA:5,8
+FN:5,System.String HealthMed.AgendaConsulta.Application.ViewModels.AutenticacaoViewModel::get_Senha()
+FNDA:8,System.String HealthMed.AgendaConsulta.Application.ViewModels.AutenticacaoViewModel::get_Senha()
+DA:6,8
 LF:2
 LH:2
 BRF:0
@@ -276,12 +198,12 @@ FNF:2
 FNH:2
 end_of_record
 SF:D:\Hackaton_AgendaConsultas_FIAP\HealthMed.AgendaConsulta.Application\ViewModels\Paciente\AgendaConsultaViewModel.cs
-FN:10,System.Int32 HealthMed.AgendaConsulta.Application.ViewModels.Paciente.AgendaConsultaViewModel::get_MedicoId()
+FN:4,System.Int32 HealthMed.AgendaConsulta.Application.ViewModels.Paciente.AgendaConsultaViewModel::get_MedicoId()
 FNDA:0,System.Int32 HealthMed.AgendaConsulta.Application.ViewModels.Paciente.AgendaConsultaViewModel::get_MedicoId()
-DA:11,0
-FN:11,System.DateTime HealthMed.AgendaConsulta.Application.ViewModels.Paciente.AgendaConsultaViewModel::get_InicioConsulta()
+DA:5,0
+FN:5,System.DateTime HealthMed.AgendaConsulta.Application.ViewModels.Paciente.AgendaConsultaViewModel::get_InicioConsulta()
 FNDA:0,System.DateTime HealthMed.AgendaConsulta.Application.ViewModels.Paciente.AgendaConsultaViewModel::get_InicioConsulta()
-DA:12,0
+DA:6,0
 LF:2
 LH:0
 BRF:0
@@ -304,18 +226,18 @@ FNF:2
 FNH:0
 end_of_record
 SF:D:\Hackaton_AgendaConsultas_FIAP\HealthMed.AgendaConsulta.Application\ViewModels\Paciente\CadastraPacienteViewModel.cs
-FN:10,System.String HealthMed.AgendaConsulta.Application.ViewModels.Paciente.CadastraPacienteViewModel::get_Nome()
+FN:4,System.String HealthMed.AgendaConsulta.Application.ViewModels.Paciente.CadastraPacienteViewModel::get_Nome()
 FNDA:0,System.String HealthMed.AgendaConsulta.Application.ViewModels.Paciente.CadastraPacienteViewModel::get_Nome()
-DA:11,0
-FN:11,System.String HealthMed.AgendaConsulta.Application.ViewModels.Paciente.CadastraPacienteViewModel::get_CPF()
+DA:5,0
+FN:5,System.String HealthMed.AgendaConsulta.Application.ViewModels.Paciente.CadastraPacienteViewModel::get_CPF()
 FNDA:0,System.String HealthMed.AgendaConsulta.Application.ViewModels.Paciente.CadastraPacienteViewModel::get_CPF()
-DA:12,0
-FN:12,System.String HealthMed.AgendaConsulta.Application.ViewModels.Paciente.CadastraPacienteViewModel::get_Email()
+DA:6,0
+FN:6,System.String HealthMed.AgendaConsulta.Application.ViewModels.Paciente.CadastraPacienteViewModel::get_Email()
 FNDA:0,System.String HealthMed.AgendaConsulta.Application.ViewModels.Paciente.CadastraPacienteViewModel::get_Email()
-DA:13,0
-FN:13,System.String HealthMed.AgendaConsulta.Application.ViewModels.Paciente.CadastraPacienteViewModel::get_Senha()
+DA:7,0
+FN:7,System.String HealthMed.AgendaConsulta.Application.ViewModels.Paciente.CadastraPacienteViewModel::get_Senha()
 FNDA:0,System.String HealthMed.AgendaConsulta.Application.ViewModels.Paciente.CadastraPacienteViewModel::get_Senha()
-DA:14,0
+DA:8,0
 LF:4
 LH:0
 BRF:0
@@ -325,22 +247,22 @@ FNH:0
 end_of_record
 SF:D:\Hackaton_AgendaConsultas_FIAP\HealthMed.AgendaConsulta.Application\Validations\AutenticacaoValidation.cs
 FN:7,System.Void HealthMed.AgendaConsulta.Application.Validations.AutenticacaoValidation::.ctor()
-FNDA:0,System.Void HealthMed.AgendaConsulta.Application.Validations.AutenticacaoValidation::.ctor()
-DA:8,0
-DA:9,0
-DA:10,0
-DA:11,0
-DA:12,0
-DA:14,0
-DA:15,0
-DA:16,0
-DA:17,0
+FNDA:2,System.Void HealthMed.AgendaConsulta.Application.Validations.AutenticacaoValidation::.ctor()
+DA:8,2
+DA:9,2
+DA:10,2
+DA:11,2
+DA:12,2
+DA:14,2
+DA:15,2
+DA:16,2
+DA:17,2
 LF:9
-LH:0
+LH:9
 BRF:0
 BRH:0
 FNF:1
-FNH:0
+FNH:1
 end_of_record
 SF:D:\Hackaton_AgendaConsultas_FIAP\HealthMed.AgendaConsulta.Application\Validations\IdValidation.cs
 FN:6,System.Void HealthMed.AgendaConsulta.Application.Validations.IdValidation::.ctor()
@@ -377,14 +299,14 @@ FNF:1
 FNH:0
 end_of_record
 SF:D:\Hackaton_AgendaConsultas_FIAP\HealthMed.AgendaConsulta.Application\Validations\Paciente\BuscaMedicosValidation.cs
-FN:11,System.Void HealthMed.AgendaConsulta.Application.Validations.Paciente.BuscaMedicosValidation::.ctor()
+FN:6,System.Void HealthMed.AgendaConsulta.Application.Validations.Paciente.BuscaMedicosValidation::.ctor()
 FNDA:0,System.Void HealthMed.AgendaConsulta.Application.Validations.Paciente.BuscaMedicosValidation::.ctor()
+DA:7,0
+DA:8,0
+DA:9,0
+DA:10,0
+DA:11,0
 DA:12,0
-DA:13,0
-DA:14,0
-DA:15,0
-DA:16,0
-DA:17,0
 LF:6
 LH:0
 BRF:0
@@ -419,118 +341,118 @@ FNH:0
 end_of_record
 SF:D:\Hackaton_AgendaConsultas_FIAP\HealthMed.AgendaConsulta.Application\Validations\Medico\CadastraMedicoValidation.cs
 FN:7,System.Void HealthMed.AgendaConsulta.Application.Validations.Medico.CadastraMedicoValidation::.ctor()
-FNDA:0,System.Void HealthMed.AgendaConsulta.Application.Validations.Medico.CadastraMedicoValidation::.ctor()
-DA:8,0
-DA:9,0
-DA:10,0
-DA:11,0
-DA:12,0
-DA:14,0
-DA:15,0
-DA:16,0
-DA:18,0
-DA:19,0
-DA:20,0
-DA:22,0
-DA:23,0
-DA:24,0
-DA:26,0
-DA:27,0
-DA:28,0
-DA:29,0
+FNDA:2,System.Void HealthMed.AgendaConsulta.Application.Validations.Medico.CadastraMedicoValidation::.ctor()
+DA:8,2
+DA:9,2
+DA:10,2
+DA:11,2
+DA:12,2
+DA:14,2
+DA:15,2
+DA:16,2
+DA:18,2
+DA:19,2
+DA:20,2
+DA:22,2
+DA:23,2
+DA:24,2
+DA:26,2
+DA:27,2
+DA:28,2
+DA:29,2
 LF:18
-LH:0
+LH:18
 BRF:0
 BRH:0
 FNF:1
-FNH:0
+FNH:1
 end_of_record
 SF:D:\Hackaton_AgendaConsultas_FIAP\HealthMed.AgendaConsulta.Application\Validations\Medico\EditaExpedienteValidation.cs
 FN:7,System.Void HealthMed.AgendaConsulta.Application.Validations.Medico.EditaExpedienteValidation::.ctor()
-FNDA:0,System.Void HealthMed.AgendaConsulta.Application.Validations.Medico.EditaExpedienteValidation::.ctor()
-DA:8,0
-DA:9,0
-DA:10,0
-DA:11,0
-DA:12,0
-DA:13,0
-DA:15,0
-DA:16,0
-DA:17,0
-DA:18,0
-DA:20,0
-DA:21,0
-DA:22,0
-DA:23,0
-DA:25,0
-DA:26,0
-DA:27,0
-DA:28,0
-DA:30,0
-DA:31,0
-DA:32,0
-DA:33,0
-DA:35,0
-DA:36,0
-DA:37,0
-DA:38,0
-DA:40,0
-DA:41,0
-DA:42,0
-DA:43,0
-DA:44,0
+FNDA:2,System.Void HealthMed.AgendaConsulta.Application.Validations.Medico.EditaExpedienteValidation::.ctor()
+DA:8,2
+DA:9,2
+DA:10,2
+DA:11,2
+DA:12,2
+DA:13,2
+DA:15,2
+DA:16,2
+DA:17,2
+DA:18,2
+DA:20,2
+DA:21,2
+DA:22,2
+DA:23,2
+DA:25,2
+DA:26,2
+DA:27,2
+DA:28,2
+DA:30,2
+DA:31,2
+DA:32,2
+DA:33,2
+DA:35,2
+DA:36,2
+DA:37,2
+DA:38,2
+DA:40,2
+DA:41,2
+DA:42,2
+DA:43,2
+DA:44,2
 LF:31
-LH:0
+LH:31
 BRF:0
 BRH:0
 FNF:1
-FNH:0
+FNH:1
 end_of_record
 SF:D:\Hackaton_AgendaConsultas_FIAP\HealthMed.AgendaConsulta.Application\Services\MedicoApplicationService.cs
 FN:16,System.Void HealthMed.AgendaConsulta.Application.Services.MedicoApplicationService::.ctor(AutoMapper.IMapper,HealthMed.AgendaConsulta.Domain.Interfaces.Services.IMedicoService,HealthMed.AgendaConsulta.Domain.Interfaces.Notifications.INotificador)
-FNDA:0,System.Void HealthMed.AgendaConsulta.Application.Services.MedicoApplicationService::.ctor(AutoMapper.IMapper,HealthMed.AgendaConsulta.Domain.Interfaces.Services.IMedicoService,HealthMed.AgendaConsulta.Domain.Interfaces.Notifications.INotificador)
-DA:17,0
+FNDA:6,System.Void HealthMed.AgendaConsulta.Application.Services.MedicoApplicationService::.ctor(AutoMapper.IMapper,HealthMed.AgendaConsulta.Domain.Interfaces.Services.IMedicoService,HealthMed.AgendaConsulta.Domain.Interfaces.Notifications.INotificador)
+DA:17,6
 FN:19,System.Void HealthMed.AgendaConsulta.Application.Services.MedicoApplicationService/<AutenticarMedico>d__4::MoveNext()
-FNDA:0,System.Void HealthMed.AgendaConsulta.Application.Services.MedicoApplicationService/<AutenticarMedico>d__4::MoveNext()
-DA:20,0
-DA:21,0
-DA:23,0
-DA:24,0
-DA:25,0
-DA:26,0
-DA:29,0
-DA:30,0
-BRDA:23,62,0,0
-BRDA:23,62,1,0
+FNDA:2,System.Void HealthMed.AgendaConsulta.Application.Services.MedicoApplicationService/<AutenticarMedico>d__4::MoveNext()
+DA:20,2
+DA:21,2
+DA:23,2
+DA:24,1
+DA:25,1
+DA:26,1
+DA:29,1
+DA:30,2
+BRDA:23,62,0,1
+BRDA:23,62,1,1
 FN:32,System.Void HealthMed.AgendaConsulta.Application.Services.MedicoApplicationService/<CadastrarMedico>d__5::MoveNext()
-FNDA:0,System.Void HealthMed.AgendaConsulta.Application.Services.MedicoApplicationService/<CadastrarMedico>d__5::MoveNext()
-DA:33,0
-DA:34,0
-DA:36,0
-DA:37,0
-DA:39,0
-DA:40,0
-DA:41,0
-BRDA:36,59,0,0
-BRDA:36,59,1,0
+FNDA:2,System.Void HealthMed.AgendaConsulta.Application.Services.MedicoApplicationService/<CadastrarMedico>d__5::MoveNext()
+DA:33,2
+DA:34,2
+DA:36,2
+DA:37,1
+DA:39,1
+DA:40,1
+DA:41,2
+BRDA:36,59,0,1
+BRDA:36,59,1,1
 FN:43,System.Void HealthMed.AgendaConsulta.Application.Services.MedicoApplicationService/<EditarExpediente>d__6::MoveNext()
-FNDA:0,System.Void HealthMed.AgendaConsulta.Application.Services.MedicoApplicationService/<EditarExpediente>d__6::MoveNext()
-DA:44,0
-DA:45,0
-DA:47,0
-DA:48,0
-DA:49,0
-DA:50,0
-DA:51,0
-DA:52,0
-BRDA:47,62,0,0
-BRDA:47,62,1,0
+FNDA:2,System.Void HealthMed.AgendaConsulta.Application.Services.MedicoApplicationService/<EditarExpediente>d__6::MoveNext()
+DA:44,2
+DA:45,2
+DA:47,2
+DA:48,1
+DA:49,1
+DA:50,1
+DA:51,1
+DA:52,2
+BRDA:47,62,0,1
+BRDA:47,62,1,2
 LF:24
-LH:0
+LH:24
 BRF:6
-BRH:0
+BRH:6
 FNF:4
-FNH:0
+FNH:4
 end_of_record
 SF:D:\Hackaton_AgendaConsultas_FIAP\HealthMed.AgendaConsulta.Application\Services\PacienteApplicationService.cs
 FN:16,System.Void HealthMed.AgendaConsulta.Application.Services.PacienteApplicationServic::.ctor(AutoMapper.IMapper,HealthMed.AgendaConsulta.Domain.Interfaces.Services.IPacienteService,HealthMed.AgendaConsulta.Domain.Interfaces.Notifications.INotificador)
@@ -595,54 +517,54 @@ FNH:0
 end_of_record
 SF:D:\Hackaton_AgendaConsultas_FIAP\HealthMed.AgendaConsulta.Domain\Services\MedicoService.cs
 FN:13,System.Void HealthMed.AgendaConsulta.Domain.Services.MedicoService::.ctor(HealthMed.AgendaConsulta.Domain.Interfaces.Services.ITokenService,HealthMed.AgendaConsulta.Domain.Interfaces.Repositories.IMedicoRepository,HealthMed.AgendaConsulta.Domain.Interfaces.Notifications.INotificador)
-FNDA:0,System.Void HealthMed.AgendaConsulta.Domain.Services.MedicoService::.ctor(HealthMed.AgendaConsulta.Domain.Interfaces.Services.ITokenService,HealthMed.AgendaConsulta.Domain.Interfaces.Repositories.IMedicoRepository,HealthMed.AgendaConsulta.Domain.Interfaces.Notifications.INotificador)
-DA:14,0
+FNDA:6,System.Void HealthMed.AgendaConsulta.Domain.Services.MedicoService::.ctor(HealthMed.AgendaConsulta.Domain.Interfaces.Services.ITokenService,HealthMed.AgendaConsulta.Domain.Interfaces.Repositories.IMedicoRepository,HealthMed.AgendaConsulta.Domain.Interfaces.Notifications.INotificador)
+DA:14,6
 FN:16,System.Void HealthMed.AgendaConsulta.Domain.Services.MedicoService/<Autenticar>d__3::MoveNext()
-FNDA:0,System.Void HealthMed.AgendaConsulta.Domain.Services.MedicoService/<Autenticar>d__3::MoveNext()
-DA:17,0
-DA:18,0
-DA:20,0
-DA:21,0
-DA:22,0
-DA:23,0
-DA:26,0
-DA:27,0
-BRDA:20,164,0,0
-BRDA:20,164,1,0
+FNDA:2,System.Void HealthMed.AgendaConsulta.Domain.Services.MedicoService/<Autenticar>d__3::MoveNext()
+DA:17,2
+DA:18,2
+DA:20,2
+DA:21,1
+DA:22,1
+DA:23,1
+DA:26,1
+DA:27,2
+BRDA:20,164,0,1
+BRDA:20,164,1,1
 FN:29,System.Void HealthMed.AgendaConsulta.Domain.Services.MedicoService/<Cadastrar>d__4::MoveNext()
-FNDA:0,System.Void HealthMed.AgendaConsulta.Domain.Services.MedicoService/<Cadastrar>d__4::MoveNext()
-DA:30,0
-DA:31,0
-DA:32,0
-DA:33,0
-DA:34,0
-DA:36,0
-DA:37,0
-DA:38,0
-DA:39,0
-DA:42,0
-DA:43,0
-BRDA:36,537,0,0
-BRDA:36,537,1,0
+FNDA:2,System.Void HealthMed.AgendaConsulta.Domain.Services.MedicoService/<Cadastrar>d__4::MoveNext()
+DA:30,2
+DA:31,2
+DA:32,2
+DA:33,2
+DA:34,2
+DA:36,2
+DA:37,1
+DA:38,1
+DA:39,1
+DA:42,1
+DA:43,2
+BRDA:36,537,0,1
+BRDA:36,537,1,1
 FN:45,System.Void HealthMed.AgendaConsulta.Domain.Services.MedicoService/<EditarExpediente>d__5::MoveNext()
-FNDA:0,System.Void HealthMed.AgendaConsulta.Domain.Services.MedicoService/<EditarExpediente>d__5::MoveNext()
-DA:46,0
-DA:47,0
-DA:49,0
-DA:50,0
-DA:51,0
-DA:52,0
-DA:55,0
-DA:56,0
-DA:57,0
-BRDA:49,173,0,0
-BRDA:49,173,1,0
+FNDA:2,System.Void HealthMed.AgendaConsulta.Domain.Services.MedicoService/<EditarExpediente>d__5::MoveNext()
+DA:46,2
+DA:47,2
+DA:49,2
+DA:50,1
+DA:51,1
+DA:52,1
+DA:55,1
+DA:56,1
+DA:57,2
+BRDA:49,173,0,1
+BRDA:49,173,1,1
 LF:29
-LH:0
+LH:29
 BRF:6
-BRH:0
+BRH:6
 FNF:4
-FNH:0
+FNH:4
 end_of_record
 SF:D:\Hackaton_AgendaConsultas_FIAP\HealthMed.AgendaConsulta.Domain\Services\PacienteService.cs
 FN:57,System.Threading.Tasks.Task`1<System.String> HealthMed.AgendaConsulta.Domain.Services.PacienteService::AgendarConsulta(HealthMed.AgendaConsulta.Domain.Entities.Consulta)
@@ -700,39 +622,39 @@ FNH:0
 end_of_record
 SF:D:\Hackaton_AgendaConsultas_FIAP\HealthMed.AgendaConsulta.Domain\Services\TokenService.cs
 FN:14,HealthMed.AgendaConsulta.Domain.Entities.ValueObject.TokenAcesso HealthMed.AgendaConsulta.Domain.Services.TokenService::GerarToken(System.String,HealthMed.AgendaConsulta.Domain.Entities.Enums.TipoCredencial)
-FNDA:0,HealthMed.AgendaConsulta.Domain.Entities.ValueObject.TokenAcesso HealthMed.AgendaConsulta.Domain.Services.TokenService::GerarToken(System.String,HealthMed.AgendaConsulta.Domain.Entities.Enums.TipoCredencial)
-DA:15,0
-DA:16,0
-DA:17,0
-DA:19,0
-DA:20,0
-DA:21,0
-DA:22,0
-DA:23,0
-DA:24,0
-DA:25,0
-DA:26,0
-DA:27,0
-DA:28,0
-DA:29,0
-DA:30,0
-DA:32,0
-DA:33,0
-DA:35,0
-DA:36,0
-DA:37,0
-DA:38,0
-DA:39,0
-DA:40,0
+FNDA:1,HealthMed.AgendaConsulta.Domain.Entities.ValueObject.TokenAcesso HealthMed.AgendaConsulta.Domain.Services.TokenService::GerarToken(System.String,HealthMed.AgendaConsulta.Domain.Entities.Enums.TipoCredencial)
+DA:15,1
+DA:16,1
+DA:17,1
+DA:19,1
+DA:20,1
+DA:21,1
+DA:22,1
+DA:23,1
+DA:24,1
+DA:25,1
+DA:26,1
+DA:27,1
+DA:28,1
+DA:29,1
+DA:30,1
+DA:32,1
+DA:33,1
+DA:35,1
+DA:36,1
+DA:37,1
+DA:38,1
+DA:39,1
+DA:40,1
 FN:11,System.Void HealthMed.AgendaConsulta.Domain.Services.TokenService::.ctor(HealthMed.AgendaConsulta.Domain.Entities.Parameters.AuthenticationParameters)
-FNDA:0,System.Void HealthMed.AgendaConsulta.Domain.Services.TokenService::.ctor(HealthMed.AgendaConsulta.Domain.Entities.Parameters.AuthenticationParameters)
-DA:12,0
+FNDA:1,System.Void HealthMed.AgendaConsulta.Domain.Services.TokenService::.ctor(HealthMed.AgendaConsulta.Domain.Entities.Parameters.AuthenticationParameters)
+DA:12,1
 LF:24
-LH:0
+LH:24
 BRF:0
 BRH:0
 FNF:2
-FNH:0
+FNH:2
 end_of_record
 SF:D:\Hackaton_AgendaConsultas_FIAP\HealthMed.AgendaConsulta.Domain\Notifications\Notificacao.cs
 FN:12,System.String HealthMed.AgendaConsulta.Domain.Notifications.Notificacao::get_Mensagem()
@@ -742,12 +664,12 @@ FN:13,HealthMed.AgendaConsulta.Domain.Notifications.TipoNotificacao HealthMed.Ag
 FNDA:3,HealthMed.AgendaConsulta.Domain.Notifications.TipoNotificacao HealthMed.AgendaConsulta.Domain.Notifications.Notificacao::get_Tipo()
 DA:14,3
 FN:14,System.Void HealthMed.AgendaConsulta.Domain.Notifications.Notificacao::.ctor(System.String,HealthMed.AgendaConsulta.Domain.Notifications.TipoNotificacao)
-FNDA:3,System.Void HealthMed.AgendaConsulta.Domain.Notifications.Notificacao::.ctor(System.String,HealthMed.AgendaConsulta.Domain.Notifications.TipoNotificacao)
-DA:15,3
-DA:16,3
-DA:17,3
-DA:18,3
-DA:19,3
+FNDA:18,System.Void HealthMed.AgendaConsulta.Domain.Notifications.Notificacao::.ctor(System.String,HealthMed.AgendaConsulta.Domain.Notifications.TipoNotificacao)
+DA:15,18
+DA:16,18
+DA:17,18
+DA:18,18
+DA:19,18
 LF:7
 LH:7
 BRF:0
@@ -757,19 +679,19 @@ FNH:3
 end_of_record
 SF:D:\Hackaton_AgendaConsultas_FIAP\HealthMed.AgendaConsulta.Domain\Notifications\Notificador.cs
 FN:9,System.Void HealthMed.AgendaConsulta.Domain.Notifications.Notificador::AddNotificacao(HealthMed.AgendaConsulta.Domain.Notifications.Notificacao)
-FNDA:3,System.Void HealthMed.AgendaConsulta.Domain.Notifications.Notificador::AddNotificacao(HealthMed.AgendaConsulta.Domain.Notifications.Notificacao)
-DA:10,3
-DA:11,3
-DA:12,3
+FNDA:18,System.Void HealthMed.AgendaConsulta.Domain.Notifications.Notificador::AddNotificacao(HealthMed.AgendaConsulta.Domain.Notifications.Notificacao)
+DA:10,18
+DA:11,18
+DA:12,18
 FN:13,System.Collections.Generic.IReadOnlyCollection`1<HealthMed.AgendaConsulta.Domain.Notifications.Notificacao> HealthMed.AgendaConsulta.Domain.Notifications.Notificador::ObterNotificacoes()
 FNDA:3,System.Collections.Generic.IReadOnlyCollection`1<HealthMed.AgendaConsulta.Domain.Notifications.Notificacao> HealthMed.AgendaConsulta.Domain.Notifications.Notificador::ObterNotificacoes()
 DA:14,3
 FN:14,System.Boolean HealthMed.AgendaConsulta.Domain.Notifications.Notificador::TemNotificacao()
-FNDA:12,System.Boolean HealthMed.AgendaConsulta.Domain.Notifications.Notificador::TemNotificacao()
-DA:15,12
+FNDA:30,System.Boolean HealthMed.AgendaConsulta.Domain.Notifications.Notificador::TemNotificacao()
+DA:15,30
 FN:6,System.Void HealthMed.AgendaConsulta.Domain.Notifications.Notificador::.ctor()
-FNDA:9,System.Void HealthMed.AgendaConsulta.Domain.Notifications.Notificador::.ctor()
-DA:7,9
+FNDA:21,System.Void HealthMed.AgendaConsulta.Domain.Notifications.Notificador::.ctor()
+DA:7,21
 LF:6
 LH:6
 BRF:0
@@ -779,27 +701,27 @@ FNH:4
 end_of_record
 SF:D:\Hackaton_AgendaConsultas_FIAP\HealthMed.AgendaConsulta.Domain\Notifications\Abstract\NotificadorContext.cs
 FN:9,System.Void HealthMed.AgendaConsulta.Domain.Notifications.Abstract.NotificadorContext::Notificar(FluentValidation.Results.ValidationResult)
-FNDA:0,System.Void HealthMed.AgendaConsulta.Domain.Notifications.Abstract.NotificadorContext::Notificar(FluentValidation.Results.ValidationResult)
-DA:10,0
-DA:11,0
-DA:12,0
-DA:13,0
-DA:14,0
-DA:15,0
-BRDA:11,47,1,0
-BRDA:11,47,0,0
+FNDA:6,System.Void HealthMed.AgendaConsulta.Domain.Notifications.Abstract.NotificadorContext::Notificar(FluentValidation.Results.ValidationResult)
+DA:10,6
+DA:11,42
+DA:12,12
+DA:13,12
+DA:14,12
+DA:15,6
+BRDA:11,47,1,12
+BRDA:11,47,0,6
 FN:17,System.Void HealthMed.AgendaConsulta.Domain.Notifications.Abstract.NotificadorContext::Notificar(System.String,HealthMed.AgendaConsulta.Domain.Notifications.TipoNotificacao)
-FNDA:0,System.Void HealthMed.AgendaConsulta.Domain.Notifications.Abstract.NotificadorContext::Notificar(System.String,HealthMed.AgendaConsulta.Domain.Notifications.TipoNotificacao)
-DA:18,0
-DA:19,0
-DA:21,0
-DA:22,0
+FNDA:15,System.Void HealthMed.AgendaConsulta.Domain.Notifications.Abstract.NotificadorContext::Notificar(System.String,HealthMed.AgendaConsulta.Domain.Notifications.TipoNotificacao)
+DA:18,15
+DA:19,15
+DA:21,15
+DA:22,15
 FN:24,System.Void HealthMed.AgendaConsulta.Domain.Notifications.Abstract.NotificadorContext::ExecutarValidacao(TV,TVM)
-FNDA:0,System.Void HealthMed.AgendaConsulta.Domain.Notifications.Abstract.NotificadorContext::ExecutarValidacao(TV,TVM)
-DA:25,0
-DA:26,0
-DA:28,0
-DA:29,0
+FNDA:6,System.Void HealthMed.AgendaConsulta.Domain.Notifications.Abstract.NotificadorContext::ExecutarValidacao(TV,TVM)
+DA:25,6
+DA:26,6
+DA:28,6
+DA:29,6
 FN:31,System.Void HealthMed.AgendaConsulta.Domain.Notifications.Abstract.NotificadorContext::ExecutarValidacao(TV,System.Int32)
 FNDA:0,System.Void HealthMed.AgendaConsulta.Domain.Notifications.Abstract.NotificadorContext::ExecutarValidacao(TV,System.Int32)
 DA:32,0
@@ -831,397 +753,57 @@ DA:61,0
 DA:63,0
 DA:64,0
 FN:6,System.Void HealthMed.AgendaConsulta.Domain.Notifications.Abstract.NotificadorContext::.ctor(HealthMed.AgendaConsulta.Domain.Interfaces.Notifications.INotificador)
-FNDA:0,System.Void HealthMed.AgendaConsulta.Domain.Notifications.Abstract.NotificadorContext::.ctor(HealthMed.AgendaConsulta.Domain.Interfaces.Notifications.INotificador)
-DA:7,0
+FNDA:12,System.Void HealthMed.AgendaConsulta.Domain.Notifications.Abstract.NotificadorContext::.ctor(HealthMed.AgendaConsulta.Domain.Interfaces.Notifications.INotificador)
+DA:7,12
 LF:35
+LH:15
+BRF:2
+BRH:2
+FNF:9
+FNH:4
+end_of_record
+SF:D:\Hackaton_AgendaConsultas_FIAP\HealthMed.AgendaConsulta.Infra\Vendor\NotificationManager.cs
+FN:13,System.Void HealthMed.AgendaConsulta.Infra.Vendor.NotificationManager::.ctor(Microsoft.Extensions.Azure.IAzureClientFactory`1<Azure.Communication.Email.EmailClient>,HealthMed.AgendaConsulta.Domain.Entities.Parameters.AzureComunicationServiceParameters,HealthMed.AgendaConsulta.Domain.Interfaces.Notifications.INotificador)
+FNDA:0,System.Void HealthMed.AgendaConsulta.Infra.Vendor.NotificationManager::.ctor(Microsoft.Extensions.Azure.IAzureClientFactory`1<Azure.Communication.Email.EmailClient>,HealthMed.AgendaConsulta.Domain.Entities.Parameters.AzureComunicationServiceParameters,HealthMed.AgendaConsulta.Domain.Interfaces.Notifications.INotificador)
+DA:14,0
+FN:19,System.Void HealthMed.AgendaConsulta.Infra.Vendor.NotificationManager/<SendEmailNotification>d__3::MoveNext()
+FNDA:0,System.Void HealthMed.AgendaConsulta.Infra.Vendor.NotificationManager/<SendEmailNotification>d__3::MoveNext()
+DA:20,0
+DA:21,0
+DA:23,0
+DA:24,0
+DA:25,0
+DA:26,0
+DA:27,0
+DA:28,0
+DA:29,0
+DA:30,0
+DA:31,0
+DA:32,0
+DA:33,0
+DA:35,0
+DA:36,0
+DA:37,0
+DA:38,0
+DA:39,0
+DA:41,0
+DA:43,0
+DA:44,0
+DA:46,0
+DA:47,0
+BRDA:43,492,0,0
+BRDA:43,492,1,0
+LF:24
 LH:0
 BRF:2
 BRH:0
-FNF:9
-FNH:0
-end_of_record
-SF:D:\Hackaton_AgendaConsultas_FIAP\HealthMed.AgendaConsulta.Domain\Entities\Consulta.cs
-FN:4,System.DateTime HealthMed.AgendaConsulta.Domain.Entities.Consulta::get_Inicio()
-FNDA:0,System.DateTime HealthMed.AgendaConsulta.Domain.Entities.Consulta::get_Inicio()
-DA:5,0
-FN:5,System.DateTime HealthMed.AgendaConsulta.Domain.Entities.Consulta::get_Fim()
-FNDA:0,System.DateTime HealthMed.AgendaConsulta.Domain.Entities.Consulta::get_Fim()
-DA:6,0
-FN:6,System.Int32 HealthMed.AgendaConsulta.Domain.Entities.Consulta::get_MedicoId()
-FNDA:0,System.Int32 HealthMed.AgendaConsulta.Domain.Entities.Consulta::get_MedicoId()
-DA:7,0
-FN:7,System.Int32 HealthMed.AgendaConsulta.Domain.Entities.Consulta::get_PacienteId()
-FNDA:0,System.Int32 HealthMed.AgendaConsulta.Domain.Entities.Consulta::get_PacienteId()
-DA:8,0
-LF:4
-LH:0
-BRF:0
-BRH:0
-FNF:4
-FNH:0
-end_of_record
-SF:D:\Hackaton_AgendaConsultas_FIAP\HealthMed.AgendaConsulta.Domain\Entities\EntidadeBase.cs
-FN:4,System.Int32 HealthMed.AgendaConsulta.Domain.Entities.EntidadeBase::get_Id()
-FNDA:0,System.Int32 HealthMed.AgendaConsulta.Domain.Entities.EntidadeBase::get_Id()
-DA:5,0
-LF:1
-LH:0
-BRF:0
-BRH:0
-FNF:1
-FNH:0
-end_of_record
-SF:D:\Hackaton_AgendaConsultas_FIAP\HealthMed.AgendaConsulta.Domain\Entities\Medico.cs
-FN:6,System.String HealthMed.AgendaConsulta.Domain.Entities.Medico::get_Nome()
-FNDA:0,System.String HealthMed.AgendaConsulta.Domain.Entities.Medico::get_Nome()
-DA:7,0
-FN:7,System.String HealthMed.AgendaConsulta.Domain.Entities.Medico::get_CPF()
-FNDA:0,System.String HealthMed.AgendaConsulta.Domain.Entities.Medico::get_CPF()
-DA:8,0
-FN:8,System.String HealthMed.AgendaConsulta.Domain.Entities.Medico::get_NumeroCRM()
-FNDA:0,System.String HealthMed.AgendaConsulta.Domain.Entities.Medico::get_NumeroCRM()
-DA:9,0
-FN:9,HealthMed.AgendaConsulta.Domain.Entities.ValueObject.Credencial HealthMed.AgendaConsulta.Domain.Entities.Medico::get_Credencial()
-FNDA:0,HealthMed.AgendaConsulta.Domain.Entities.ValueObject.Credencial HealthMed.AgendaConsulta.Domain.Entities.Medico::get_Credencial()
-DA:10,0
-FN:10,HealthMed.AgendaConsulta.Domain.Entities.ValueObject.HorarioExpediente HealthMed.AgendaConsulta.Domain.Entities.Medico::get_HorarioExpediente()
-FNDA:0,HealthMed.AgendaConsulta.Domain.Entities.ValueObject.HorarioExpediente HealthMed.AgendaConsulta.Domain.Entities.Medico::get_HorarioExpediente()
-DA:11,0
-FN:11,System.Collections.Generic.List`1<HealthMed.AgendaConsulta.Domain.Entities.Consulta> HealthMed.AgendaConsulta.Domain.Entities.Medico::get_Consultas()
-FNDA:0,System.Collections.Generic.List`1<HealthMed.AgendaConsulta.Domain.Entities.Consulta> HealthMed.AgendaConsulta.Domain.Entities.Medico::get_Consultas()
-DA:12,0
-LF:6
-LH:0
-BRF:0
-BRH:0
-FNF:6
-FNH:0
-end_of_record
-SF:D:\Hackaton_AgendaConsultas_FIAP\HealthMed.AgendaConsulta.Domain\Entities\Paciente.cs
-FN:6,System.String HealthMed.AgendaConsulta.Domain.Entities.Paciente::get_Nome()
-FNDA:0,System.String HealthMed.AgendaConsulta.Domain.Entities.Paciente::get_Nome()
-DA:7,0
-FN:7,System.String HealthMed.AgendaConsulta.Domain.Entities.Paciente::get_CPF()
-FNDA:0,System.String HealthMed.AgendaConsulta.Domain.Entities.Paciente::get_CPF()
-DA:8,0
-FN:8,HealthMed.AgendaConsulta.Domain.Entities.ValueObject.Credencial HealthMed.AgendaConsulta.Domain.Entities.Paciente::get_Credencial()
-FNDA:0,HealthMed.AgendaConsulta.Domain.Entities.ValueObject.Credencial HealthMed.AgendaConsulta.Domain.Entities.Paciente::get_Credencial()
-DA:9,0
-FN:9,System.Collections.Generic.List`1<HealthMed.AgendaConsulta.Domain.Entities.Consulta> HealthMed.AgendaConsulta.Domain.Entities.Paciente::get_Consultas()
-FNDA:0,System.Collections.Generic.List`1<HealthMed.AgendaConsulta.Domain.Entities.Consulta> HealthMed.AgendaConsulta.Domain.Entities.Paciente::get_Consultas()
-DA:10,0
-LF:4
-LH:0
-BRF:0
-BRH:0
-FNF:4
-FNH:0
-end_of_record
-SF:D:\Hackaton_AgendaConsultas_FIAP\HealthMed.AgendaConsulta.Domain\Entities\ValueObject\Credencial.cs
-FN:10,System.String HealthMed.AgendaConsulta.Domain.Entities.ValueObject.Credencial::get_Email()
-FNDA:0,System.String HealthMed.AgendaConsulta.Domain.Entities.ValueObject.Credencial::get_Email()
-DA:11,0
-FN:11,System.String HealthMed.AgendaConsulta.Domain.Entities.ValueObject.Credencial::get_Senha()
-FNDA:0,System.String HealthMed.AgendaConsulta.Domain.Entities.ValueObject.Credencial::get_Senha()
-DA:12,0
-LF:2
-LH:0
-BRF:0
-BRH:0
 FNF:2
-FNH:0
-end_of_record
-SF:D:\Hackaton_AgendaConsultas_FIAP\HealthMed.AgendaConsulta.Domain\Entities\ValueObject\HorarioExpediente.cs
-FN:10,System.Boolean HealthMed.AgendaConsulta.Domain.Entities.ValueObject.HorarioExpediente::get_TrabalhaDomingo()
-FNDA:0,System.Boolean HealthMed.AgendaConsulta.Domain.Entities.ValueObject.HorarioExpediente::get_TrabalhaDomingo()
-DA:11,0
-FN:11,System.DateTime HealthMed.AgendaConsulta.Domain.Entities.ValueObject.HorarioExpediente::get_InicioDomingo()
-FNDA:0,System.DateTime HealthMed.AgendaConsulta.Domain.Entities.ValueObject.HorarioExpediente::get_InicioDomingo()
-DA:12,0
-FN:12,System.DateTime HealthMed.AgendaConsulta.Domain.Entities.ValueObject.HorarioExpediente::get_FimDomingo()
-FNDA:0,System.DateTime HealthMed.AgendaConsulta.Domain.Entities.ValueObject.HorarioExpediente::get_FimDomingo()
-DA:13,0
-FN:14,System.Boolean HealthMed.AgendaConsulta.Domain.Entities.ValueObject.HorarioExpediente::get_TrabalhaSegunda()
-FNDA:0,System.Boolean HealthMed.AgendaConsulta.Domain.Entities.ValueObject.HorarioExpediente::get_TrabalhaSegunda()
-DA:15,0
-FN:15,System.DateTime HealthMed.AgendaConsulta.Domain.Entities.ValueObject.HorarioExpediente::get_InicioSegunda()
-FNDA:0,System.DateTime HealthMed.AgendaConsulta.Domain.Entities.ValueObject.HorarioExpediente::get_InicioSegunda()
-DA:16,0
-FN:16,System.DateTime HealthMed.AgendaConsulta.Domain.Entities.ValueObject.HorarioExpediente::get_FimSegunda()
-FNDA:0,System.DateTime HealthMed.AgendaConsulta.Domain.Entities.ValueObject.HorarioExpediente::get_FimSegunda()
-DA:17,0
-FN:18,System.Boolean HealthMed.AgendaConsulta.Domain.Entities.ValueObject.HorarioExpediente::get_TrabalhaTerca()
-FNDA:0,System.Boolean HealthMed.AgendaConsulta.Domain.Entities.ValueObject.HorarioExpediente::get_TrabalhaTerca()
-DA:19,0
-FN:19,System.DateTime HealthMed.AgendaConsulta.Domain.Entities.ValueObject.HorarioExpediente::get_InicioTerca()
-FNDA:0,System.DateTime HealthMed.AgendaConsulta.Domain.Entities.ValueObject.HorarioExpediente::get_InicioTerca()
-DA:20,0
-FN:20,System.DateTime HealthMed.AgendaConsulta.Domain.Entities.ValueObject.HorarioExpediente::get_FimTerca()
-FNDA:0,System.DateTime HealthMed.AgendaConsulta.Domain.Entities.ValueObject.HorarioExpediente::get_FimTerca()
-DA:21,0
-FN:22,System.Boolean HealthMed.AgendaConsulta.Domain.Entities.ValueObject.HorarioExpediente::get_TrabalhaQuarta()
-FNDA:0,System.Boolean HealthMed.AgendaConsulta.Domain.Entities.ValueObject.HorarioExpediente::get_TrabalhaQuarta()
-DA:23,0
-FN:23,System.DateTime HealthMed.AgendaConsulta.Domain.Entities.ValueObject.HorarioExpediente::get_InicioQuarta()
-FNDA:0,System.DateTime HealthMed.AgendaConsulta.Domain.Entities.ValueObject.HorarioExpediente::get_InicioQuarta()
-DA:24,0
-FN:24,System.DateTime HealthMed.AgendaConsulta.Domain.Entities.ValueObject.HorarioExpediente::get_FimQuarta()
-FNDA:0,System.DateTime HealthMed.AgendaConsulta.Domain.Entities.ValueObject.HorarioExpediente::get_FimQuarta()
-DA:25,0
-FN:26,System.Boolean HealthMed.AgendaConsulta.Domain.Entities.ValueObject.HorarioExpediente::get_TrabalhaQuinta()
-FNDA:0,System.Boolean HealthMed.AgendaConsulta.Domain.Entities.ValueObject.HorarioExpediente::get_TrabalhaQuinta()
-DA:27,0
-FN:27,System.DateTime HealthMed.AgendaConsulta.Domain.Entities.ValueObject.HorarioExpediente::get_InicioQuinta()
-FNDA:0,System.DateTime HealthMed.AgendaConsulta.Domain.Entities.ValueObject.HorarioExpediente::get_InicioQuinta()
-DA:28,0
-FN:28,System.DateTime HealthMed.AgendaConsulta.Domain.Entities.ValueObject.HorarioExpediente::get_FimQuinta()
-FNDA:0,System.DateTime HealthMed.AgendaConsulta.Domain.Entities.ValueObject.HorarioExpediente::get_FimQuinta()
-DA:29,0
-FN:30,System.Boolean HealthMed.AgendaConsulta.Domain.Entities.ValueObject.HorarioExpediente::get_TrabalhaSexta()
-FNDA:0,System.Boolean HealthMed.AgendaConsulta.Domain.Entities.ValueObject.HorarioExpediente::get_TrabalhaSexta()
-DA:31,0
-FN:31,System.DateTime HealthMed.AgendaConsulta.Domain.Entities.ValueObject.HorarioExpediente::get_InicioSexta()
-FNDA:0,System.DateTime HealthMed.AgendaConsulta.Domain.Entities.ValueObject.HorarioExpediente::get_InicioSexta()
-DA:32,0
-FN:32,System.DateTime HealthMed.AgendaConsulta.Domain.Entities.ValueObject.HorarioExpediente::get_FimSexta()
-FNDA:0,System.DateTime HealthMed.AgendaConsulta.Domain.Entities.ValueObject.HorarioExpediente::get_FimSexta()
-DA:33,0
-FN:34,System.Boolean HealthMed.AgendaConsulta.Domain.Entities.ValueObject.HorarioExpediente::get_TrabalhaSabado()
-FNDA:0,System.Boolean HealthMed.AgendaConsulta.Domain.Entities.ValueObject.HorarioExpediente::get_TrabalhaSabado()
-DA:35,0
-FN:35,System.DateTime HealthMed.AgendaConsulta.Domain.Entities.ValueObject.HorarioExpediente::get_InicioSabado()
-FNDA:0,System.DateTime HealthMed.AgendaConsulta.Domain.Entities.ValueObject.HorarioExpediente::get_InicioSabado()
-DA:36,0
-FN:36,System.DateTime HealthMed.AgendaConsulta.Domain.Entities.ValueObject.HorarioExpediente::get_FimSabado()
-FNDA:0,System.DateTime HealthMed.AgendaConsulta.Domain.Entities.ValueObject.HorarioExpediente::get_FimSabado()
-DA:37,0
-LF:21
-LH:0
-BRF:0
-BRH:0
-FNF:21
-FNH:0
-end_of_record
-SF:D:\Hackaton_AgendaConsultas_FIAP\HealthMed.AgendaConsulta.Domain\Entities\ValueObject\TokenAcesso.cs
-FN:10,System.String HealthMed.AgendaConsulta.Domain.Entities.ValueObject.TokenAcesso::get_Token()
-FNDA:3,System.String HealthMed.AgendaConsulta.Domain.Entities.ValueObject.TokenAcesso::get_Token()
-DA:11,3
-FN:11,System.DateTime HealthMed.AgendaConsulta.Domain.Entities.ValueObject.TokenAcesso::get_Expiration()
-FNDA:3,System.DateTime HealthMed.AgendaConsulta.Domain.Entities.ValueObject.TokenAcesso::get_Expiration()
-DA:12,3
-LF:2
-LH:2
-BRF:0
-BRH:0
-FNF:2
-FNH:2
-end_of_record
-SF:D:\Hackaton_AgendaConsultas_FIAP\HealthMed.AgendaConsulta.Domain\Entities\Parameters\AuthenticationParameters.cs
-FN:10,System.String HealthMed.AgendaConsulta.Domain.Entities.Parameters.AuthenticationParameters::get_SecretKey()
-FNDA:0,System.String HealthMed.AgendaConsulta.Domain.Entities.Parameters.AuthenticationParameters::get_SecretKey()
-DA:11,0
-FN:11,System.Int32 HealthMed.AgendaConsulta.Domain.Entities.Parameters.AuthenticationParameters::get_ExpiresInHours()
-FNDA:0,System.Int32 HealthMed.AgendaConsulta.Domain.Entities.Parameters.AuthenticationParameters::get_ExpiresInHours()
-DA:12,0
-LF:2
-LH:0
-BRF:0
-BRH:0
-FNF:2
-FNH:0
-end_of_record
-SF:D:\Hackaton_AgendaConsultas_FIAP\HealthMed.AgendaConsulta.Infra\ApplicationDbContext.cs
-FN:12,Microsoft.EntityFrameworkCore.DbSet`1<HealthMed.AgendaConsulta.Domain.Entities.Medico> HealthMed.AgendaConsulta.Infra.ApplicationDbContext::get_Medicos()
-FNDA:0,Microsoft.EntityFrameworkCore.DbSet`1<HealthMed.AgendaConsulta.Domain.Entities.Medico> HealthMed.AgendaConsulta.Infra.ApplicationDbContext::get_Medicos()
-DA:13,0
-FN:13,Microsoft.EntityFrameworkCore.DbSet`1<HealthMed.AgendaConsulta.Domain.Entities.Paciente> HealthMed.AgendaConsulta.Infra.ApplicationDbContext::get_Pacientes()
-FNDA:0,Microsoft.EntityFrameworkCore.DbSet`1<HealthMed.AgendaConsulta.Domain.Entities.Paciente> HealthMed.AgendaConsulta.Infra.ApplicationDbContext::get_Pacientes()
-DA:14,0
-FN:14,Microsoft.EntityFrameworkCore.DbSet`1<HealthMed.AgendaConsulta.Domain.Entities.Consulta> HealthMed.AgendaConsulta.Infra.ApplicationDbContext::get_Usuarios()
-FNDA:0,Microsoft.EntityFrameworkCore.DbSet`1<HealthMed.AgendaConsulta.Domain.Entities.Consulta> HealthMed.AgendaConsulta.Infra.ApplicationDbContext::get_Usuarios()
-DA:15,0
-FN:17,System.Void HealthMed.AgendaConsulta.Infra.ApplicationDbContext::OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)
-FNDA:0,System.Void HealthMed.AgendaConsulta.Infra.ApplicationDbContext::OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)
-DA:18,0
-DA:19,0
-DA:20,0
-DA:21,0
-DA:22,0
-DA:23,0
-FN:8,System.Void HealthMed.AgendaConsulta.Infra.ApplicationDbContext::.ctor(Microsoft.EntityFrameworkCore.DbContextOptions)
-FNDA:0,System.Void HealthMed.AgendaConsulta.Infra.ApplicationDbContext::.ctor(Microsoft.EntityFrameworkCore.DbContextOptions)
-DA:9,0
-DA:10,0
-DA:11,0
-LF:12
-LH:0
-BRF:0
-BRH:0
-FNF:5
-FNH:0
-end_of_record
-SF:D:\Hackaton_AgendaConsultas_FIAP\HealthMed.AgendaConsulta.Infra\Vendor\NotificationManager.cs
-FN:8,System.Void HealthMed.AgendaConsulta.Infra.Vendor.NotificationManager::.ctor(Microsoft.Extensions.Azure.IAzureClientFactory`1<Azure.Communication.Email.EmailClient>,HealthMed.AgendaConsulta.Domain.Entities.Parameters.AzureComunicationServiceParameters)
-FNDA:0,System.Void HealthMed.AgendaConsulta.Infra.Vendor.NotificationManager::.ctor(Microsoft.Extensions.Azure.IAzureClientFactory`1<Azure.Communication.Email.EmailClient>,HealthMed.AgendaConsulta.Domain.Entities.Parameters.AzureComunicationServiceParameters)
-DA:9,0
-DA:10,0
-FN:15,System.Void HealthMed.AgendaConsulta.Infra.Vendor.NotificationManager/<SendEmailNotification>d__3::MoveNext()
-FNDA:0,System.Void HealthMed.AgendaConsulta.Infra.Vendor.NotificationManager/<SendEmailNotification>d__3::MoveNext()
-DA:16,0
-DA:17,0
-DA:19,0
-DA:20,0
-DA:21,0
-DA:22,0
-DA:23,0
-DA:24,0
-DA:25,0
-DA:26,0
-DA:27,0
-DA:28,0
-DA:29,0
-DA:32,0
-DA:33,0
-DA:34,0
-DA:35,0
-DA:36,0
-DA:37,0
-DA:39,0
-DA:40,0
-DA:42,0
-DA:43,0
-DA:44,0
-DA:46,0
-DA:48,0
-LF:28
-LH:0
-BRF:0
-BRH:0
-FNF:2
-FNH:0
-end_of_record
-SF:D:\Hackaton_AgendaConsultas_FIAP\HealthMed.AgendaConsulta.Infra\Repositories\EntidadeBaseRepository.cs
-FN:12,System.Void HealthMed.AgendaConsulta.Infra.Repositories.EntidadeBaseRepository`1::.ctor(HealthMed.AgendaConsulta.Infra.ApplicationDbContext)
-FNDA:0,System.Void HealthMed.AgendaConsulta.Infra.Repositories.EntidadeBaseRepository`1::.ctor(HealthMed.AgendaConsulta.Infra.ApplicationDbContext)
-DA:13,0
-DA:14,0
-DA:15,0
-DA:16,0
-DA:17,0
-FN:19,System.Void HealthMed.AgendaConsulta.Infra.Repositories.EntidadeBaseRepository`1/<Atualizar>d__3::MoveNext()
-FNDA:0,System.Void HealthMed.AgendaConsulta.Infra.Repositories.EntidadeBaseRepository`1/<Atualizar>d__3::MoveNext()
-DA:20,0
-DA:21,0
-DA:22,0
-DA:23,0
-FN:25,System.Void HealthMed.AgendaConsulta.Infra.Repositories.EntidadeBaseRepository`1/<Excluir>d__4::MoveNext()
-FNDA:0,System.Void HealthMed.AgendaConsulta.Infra.Repositories.EntidadeBaseRepository`1/<Excluir>d__4::MoveNext()
-DA:26,0
-DA:27,0
-DA:28,0
-DA:29,0
-FN:31,System.Void HealthMed.AgendaConsulta.Infra.Repositories.EntidadeBaseRepository`1/<Inserir>d__5::MoveNext()
-FNDA:0,System.Void HealthMed.AgendaConsulta.Infra.Repositories.EntidadeBaseRepository`1/<Inserir>d__5::MoveNext()
-DA:32,0
-DA:33,0
-DA:34,0
-DA:35,0
-FN:37,System.Void HealthMed.AgendaConsulta.Infra.Repositories.EntidadeBaseRepository`1/<Obter>d__6::MoveNext()
-FNDA:0,System.Void HealthMed.AgendaConsulta.Infra.Repositories.EntidadeBaseRepository`1/<Obter>d__6::MoveNext()
-DA:38,0
-DA:39,0
-DA:40,0
-FN:42,System.Void HealthMed.AgendaConsulta.Infra.Repositories.EntidadeBaseRepository`1/<ObterTodos>d__7::MoveNext()
-FNDA:0,System.Void HealthMed.AgendaConsulta.Infra.Repositories.EntidadeBaseRepository`1/<ObterTodos>d__7::MoveNext()
-DA:43,0
-DA:44,0
-DA:45,0
-LF:23
-LH:0
-BRF:0
-BRH:0
-FNF:6
-FNH:0
-end_of_record
-SF:D:\Hackaton_AgendaConsultas_FIAP\HealthMed.AgendaConsulta.Infra\Repositories\MedicoRepository.cs
-FN:10,System.Void HealthMed.AgendaConsulta.Infra.Repositories.MedicoRepository::.ctor(HealthMed.AgendaConsulta.Infra.ApplicationDbContext)
-FNDA:0,System.Void HealthMed.AgendaConsulta.Infra.Repositories.MedicoRepository::.ctor(HealthMed.AgendaConsulta.Infra.ApplicationDbContext)
-DA:11,0
-DA:12,0
-DA:13,0
-FN:15,System.Void HealthMed.AgendaConsulta.Infra.Repositories.MedicoRepository/<Autenticar>d__1::MoveNext()
-FNDA:0,System.Void HealthMed.AgendaConsulta.Infra.Repositories.MedicoRepository/<Autenticar>d__1::MoveNext()
-DA:16,0
-DA:17,0
-DA:18,0
-DA:19,0
-DA:20,0
-DA:21,0
-FN:23,System.Void HealthMed.AgendaConsulta.Infra.Repositories.MedicoRepository/<ObterPor>d__2::MoveNext()
-FNDA:0,System.Void HealthMed.AgendaConsulta.Infra.Repositories.MedicoRepository/<ObterPor>d__2::MoveNext()
-DA:24,0
-DA:25,0
-DA:26,0
-DA:27,0
-DA:28,0
-DA:29,0
-DA:30,0
-DA:31,0
-FN:33,System.Void HealthMed.AgendaConsulta.Infra.Repositories.MedicoRepository/<ObterPorDiaTrabalhado>d__3::MoveNext()
-FNDA:0,System.Void HealthMed.AgendaConsulta.Infra.Repositories.MedicoRepository/<ObterPorDiaTrabalhado>d__3::MoveNext()
-DA:34,0
-DA:35,0
-DA:36,0
-DA:37,0
-DA:38,0
-DA:39,0
-DA:40,0
-DA:41,0
-DA:42,0
-DA:43,0
-DA:44,0
-DA:45,0
-DA:46,0
-DA:47,0
-LF:31
-LH:0
-BRF:0
-BRH:0
-FNF:4
-FNH:0
-end_of_record
-SF:D:\Hackaton_AgendaConsultas_FIAP\HealthMed.AgendaConsulta.Infra\Repositories\PacienteRepository.cs
-FN:10,System.Void HealthMed.AgendaConsulta.Infra.Repositories.PacienteRepository::.ctor(HealthMed.AgendaConsulta.Infra.ApplicationDbContext)
-FNDA:0,System.Void HealthMed.AgendaConsulta.Infra.Repositories.PacienteRepository::.ctor(HealthMed.AgendaConsulta.Infra.ApplicationDbContext)
-DA:11,0
-DA:12,0
-DA:13,0
-FN:15,System.Void HealthMed.AgendaConsulta.Infra.Repositories.PacienteRepository/<Autenticar>d__1::MoveNext()
-FNDA:0,System.Void HealthMed.AgendaConsulta.Infra.Repositories.PacienteRepository/<Autenticar>d__1::MoveNext()
-DA:16,0
-DA:17,0
-DA:18,0
-DA:19,0
-DA:20,0
-DA:21,0
-FN:23,System.Void HealthMed.AgendaConsulta.Infra.Repositories.PacienteRepository/<ObterPor>d__2::MoveNext()
-FNDA:0,System.Void HealthMed.AgendaConsulta.Infra.Repositories.PacienteRepository/<ObterPor>d__2::MoveNext()
-DA:24,0
-DA:25,0
-DA:26,0
-DA:27,0
-DA:28,0
-DA:29,0
-LF:15
-LH:0
-BRF:0
-BRH:0
-FNF:3
 FNH:0
 end_of_record
 SF:D:\Hackaton_AgendaConsultas_FIAP\HealthMed.AgendaConsulta.Infra\Migrations\20240731233359_Inicial.cs
-FN:12,System.Void HealthMed.AgendaConsulta.Infra.Migrations.Inicial::Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+FN:11,System.Void HealthMed.AgendaConsulta.Infra.Migrations.Inicial::Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
 FNDA:0,System.Void HealthMed.AgendaConsulta.Infra.Migrations.Inicial::Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+DA:12,0
 DA:13,0
 DA:14,0
 DA:15,0
@@ -1236,7 +818,7 @@ DA:23,0
 DA:24,0
 DA:25,0
 DA:26,0
-DA:27,0
+DA:28,0
 DA:29,0
 DA:30,0
 DA:31,0
@@ -1249,7 +831,7 @@ DA:37,0
 DA:38,0
 DA:39,0
 DA:40,0
-DA:41,0
+DA:42,0
 DA:43,0
 DA:44,0
 DA:45,0
@@ -1267,7 +849,7 @@ DA:56,0
 DA:57,0
 DA:58,0
 DA:59,0
-DA:60,0
+DA:61,0
 DA:62,0
 DA:63,0
 DA:64,0
@@ -1304,7 +886,7 @@ DA:94,0
 DA:95,0
 DA:96,0
 DA:97,0
-DA:98,0
+DA:99,0
 DA:100,0
 DA:101,0
 DA:102,0
@@ -1331,7 +913,7 @@ DA:122,0
 DA:123,0
 DA:124,0
 DA:125,0
-DA:126,0
+DA:127,0
 DA:128,0
 DA:129,0
 DA:130,0
@@ -1349,32 +931,31 @@ DA:141,0
 DA:142,0
 DA:143,0
 DA:144,0
-DA:145,0
+DA:146,0
 DA:147,0
 DA:148,0
 DA:149,0
-DA:150,0
+DA:151,0
 DA:152,0
 DA:153,0
 DA:154,0
 DA:155,0
-DA:156,0
-FN:159,System.Void HealthMed.AgendaConsulta.Infra.Migrations.Inicial::Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+FN:158,System.Void HealthMed.AgendaConsulta.Infra.Migrations.Inicial::Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
 FNDA:0,System.Void HealthMed.AgendaConsulta.Infra.Migrations.Inicial::Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+DA:159,0
 DA:160,0
 DA:161,0
-DA:162,0
+DA:163,0
 DA:164,0
-DA:165,0
+DA:166,0
 DA:167,0
-DA:168,0
+DA:169,0
 DA:170,0
-DA:171,0
+DA:172,0
 DA:173,0
-DA:174,0
+DA:175,0
 DA:176,0
 DA:177,0
-DA:178,0
 LF:151
 LH:0
 BRF:0
@@ -1858,101 +1439,6 @@ DA:255,0
 DA:256,0
 DA:258,0
 LF:231
-LH:0
-BRF:0
-BRH:0
-FNF:1
-FNH:0
-end_of_record
-SF:D:\Hackaton_AgendaConsultas_FIAP\HealthMed.AgendaConsulta.Infra\Configurations\ConsultaConfiguration.cs
-FN:9,System.Void HealthMed.AgendaConsulta.Infra.Configurations.ConsultaConfiguration::Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder`1<HealthMed.AgendaConsulta.Domain.Entities.Consulta>)
-FNDA:0,System.Void HealthMed.AgendaConsulta.Infra.Configurations.ConsultaConfiguration::Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder`1<HealthMed.AgendaConsulta.Domain.Entities.Consulta>)
-DA:10,0
-DA:11,0
-DA:12,0
-DA:13,0
-DA:14,0
-DA:15,0
-LF:6
-LH:0
-BRF:0
-BRH:0
-FNF:1
-FNH:0
-end_of_record
-SF:D:\Hackaton_AgendaConsultas_FIAP\HealthMed.AgendaConsulta.Infra\Configurations\MedicoConfiguration.cs
-FN:9,System.Void HealthMed.AgendaConsulta.Infra.Configurations.MedicoConfiguration::Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder`1<HealthMed.AgendaConsulta.Domain.Entities.Medico>)
-FNDA:0,System.Void HealthMed.AgendaConsulta.Infra.Configurations.MedicoConfiguration::Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder`1<HealthMed.AgendaConsulta.Domain.Entities.Medico>)
-DA:10,0
-DA:11,0
-DA:12,0
-DA:13,0
-DA:14,0
-DA:15,0
-DA:17,0
-DA:18,0
-DA:19,0
-DA:20,0
-DA:21,0
-DA:22,0
-DA:24,0
-DA:25,0
-DA:26,0
-DA:27,0
-DA:28,0
-DA:29,0
-DA:30,0
-DA:31,0
-DA:32,0
-DA:33,0
-DA:34,0
-DA:35,0
-DA:36,0
-DA:37,0
-DA:38,0
-DA:39,0
-DA:40,0
-DA:41,0
-DA:42,0
-DA:43,0
-DA:44,0
-DA:45,0
-DA:46,0
-DA:47,0
-DA:48,0
-DA:49,0
-DA:50,0
-DA:51,0
-DA:52,0
-DA:53,0
-DA:54,0
-DA:56,0
-DA:57,0
-LF:45
-LH:0
-BRF:0
-BRH:0
-FNF:1
-FNH:0
-end_of_record
-SF:D:\Hackaton_AgendaConsultas_FIAP\HealthMed.AgendaConsulta.Infra\Configurations\PacienteConfiguration.cs
-FN:9,System.Void HealthMed.AgendaConsulta.Infra.Configurations.PacienteConfiguration::Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder`1<HealthMed.AgendaConsulta.Domain.Entities.Paciente>)
-FNDA:0,System.Void HealthMed.AgendaConsulta.Infra.Configurations.PacienteConfiguration::Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder`1<HealthMed.AgendaConsulta.Domain.Entities.Paciente>)
-DA:10,0
-DA:11,0
-DA:12,0
-DA:13,0
-DA:14,0
-DA:17,0
-DA:18,0
-DA:19,0
-DA:20,0
-DA:21,0
-DA:22,0
-DA:24,0
-DA:25,0
-DA:26,0
-LF:14
 LH:0
 BRF:0
 BRH:0

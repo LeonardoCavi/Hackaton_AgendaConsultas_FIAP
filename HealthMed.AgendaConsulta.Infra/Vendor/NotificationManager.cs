@@ -1,13 +1,17 @@
 ﻿using Azure;
 using Azure.Communication.Email;
 using HealthMed.AgendaConsulta.Domain.Entities.Parameters;
+using HealthMed.AgendaConsulta.Domain.Interfaces.Notifications;
 using HealthMed.AgendaConsulta.Domain.Interfaces.Vendor;
+using HealthMed.AgendaConsulta.Domain.Notifications;
+using HealthMed.AgendaConsulta.Domain.Notifications.Abstract;
 using Microsoft.Extensions.Azure;
 
 namespace HealthMed.AgendaConsulta.Infra.Vendor
 {
     public class NotificationManager(IAzureClientFactory<EmailClient> azureClientFactory,
-                                     AzureComunicationServiceParameters parameters) : INotificationManager
+                                     AzureComunicationServiceParameters parameters,
+                                     INotificador notificador) : NotificadorContext(notificador), INotificationManager
     {
         public async Task SendEmailNotification(string paciente,
                                                 string prestador,
@@ -28,23 +32,18 @@ namespace HealthMed.AgendaConsulta.Infra.Vendor
             var remetente = parameters.Email;
             var dest = destinatario;
 
-            try
+            EmailContent emailContent = new EmailContent(titulo)
             {
-                EmailContent emailContent = new EmailContent(titulo)
-                {
-                    Html = corpo
-                };
-                EmailMessage emailMessage = new EmailMessage(remetente, dest, emailContent);
+                Html = corpo
+            };
+            EmailMessage emailMessage = new EmailMessage(remetente, dest, emailContent);
 
-                EmailSendOperation sendEmailOp = await _email.SendAsync(WaitUntil.Completed, emailMessage);
-                EmailSendResult resultado = sendEmailOp.Value;
-                //Log de Sucesso
-            }
-            catch (Exception ex)
-            {
-                //Log de Falha
-            }
+            EmailSendOperation sendEmailOp = await _email.SendAsync(WaitUntil.Completed, emailMessage);
 
+            if (sendEmailOp.HasCompleted)
+                return;
+            else
+                Notificar("Falha no envio do email!", TipoNotificacao.Error);
         }
     }
 }

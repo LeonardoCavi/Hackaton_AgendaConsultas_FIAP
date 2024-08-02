@@ -2,10 +2,12 @@
 using HealthMed.AgendaConsulta.Domain.Entities.ValueObject;
 using HealthMed.AgendaConsulta.Domain.Interfaces.Repositories;
 using Microsoft.EntityFrameworkCore;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq.Expressions;
 
 namespace HealthMed.AgendaConsulta.Infra.Repositories
 {
+    [ExcludeFromCodeCoverage]
     public class PacienteRepository : EntidadeBaseRepository<Paciente>, IPacienteRepository
     {
         public PacienteRepository(ApplicationDbContext context) : base(context)

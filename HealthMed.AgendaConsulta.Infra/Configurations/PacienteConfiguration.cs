@@ -1,9 +1,11 @@
 ﻿using HealthMed.AgendaConsulta.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using System.Diagnostics.CodeAnalysis;
 
 namespace HealthMed.AgendaConsulta.Infra.Configurations
 {
+    [ExcludeFromCodeCoverage]
     public class PacienteConfiguration : IEntityTypeConfiguration<Paciente>
     {
         public void Configure(EntityTypeBuilder<Paciente> builder)

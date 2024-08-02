@@ -32,12 +32,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Unitario\HealthMed.AgendaConsulta.Application\" />
-    <Folder Include="Unitario\HealthMed.AgendaConsulta.Domain\" />
-    <Folder Include="Unitario\HealthMed.AgendaConsulta.Infra\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\HealthMed.AgendaConsulta.API\HealthMed.AgendaConsulta.API.csproj" />
   </ItemGroup>
 
