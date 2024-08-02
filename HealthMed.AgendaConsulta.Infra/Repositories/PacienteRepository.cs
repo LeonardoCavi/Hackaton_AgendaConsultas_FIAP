@@ -29,5 +29,13 @@ namespace HealthMed.AgendaConsulta.Infra.Repositories
                 .Where(predicate)
                 .ToListAsync();
         }
+
+        public async Task<Paciente?> ObterPacienteConsultasPorId(int id)
+        {
+            return await _dBSet
+                .Include(x => x.Consultas)
+                .Where(x => x.Id == id)
+                .FirstOrDefaultAsync();
+        }
     }
 }

@@ -18,6 +18,7 @@ namespace HealthMed.AgendaConsulta.API.Configurations
             //Repositories
             services.AddScoped<IMedicoRepository, MedicoRepository>();
             services.AddScoped<IPacienteRepository, PacienteRepository>();
+            services.AddScoped<IConsultaRepository, ConsultaRepository>();
 
             //Services
             services.AddScoped<IMedicoService, MedicoService>();

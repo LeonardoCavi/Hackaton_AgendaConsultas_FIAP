@@ -1,4 +1,5 @@
 ﻿using HealthMed.AgendaConsulta.Domain.Entities;
+using HealthMed.AgendaConsulta.Domain.Entities.Aggregates;
 using HealthMed.AgendaConsulta.Domain.Entities.ValueObject;
 
 namespace HealthMed.AgendaConsulta.Domain.Interfaces.Services
@@ -7,7 +8,7 @@ namespace HealthMed.AgendaConsulta.Domain.Interfaces.Services
     {
         Task<TokenAcesso> Autenticar(Credencial credencial);
         Task Cadastrar(Paciente paciente);
-        Task<object> BuscarMedicos(DateTime dia);
-        Task<string> AgendarConsulta(Consulta consulta);
+        Task<List<MedicoHorarioDisponivel>> BuscarMedicos(DateTime dia);
+        Task AgendarConsulta(Consulta consulta);
     }
 }

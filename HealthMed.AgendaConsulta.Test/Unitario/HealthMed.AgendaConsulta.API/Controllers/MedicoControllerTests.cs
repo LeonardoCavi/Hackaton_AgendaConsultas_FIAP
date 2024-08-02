@@ -177,7 +177,7 @@ namespace HealthMed.AgendaConsulta.Test.Unitario.HealthMed.AgendaConsulta.API.Co
 
             // Act
             var resultado = await _controller.EditarExpediente(id, expedienteMock);
-            var okResult = resultado as OkResult;
+            var okResult = resultado as OkObjectResult;
 
             // Assert
             Assert.NotNull(okResult);

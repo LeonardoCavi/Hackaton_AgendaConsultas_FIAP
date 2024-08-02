@@ -121,26 +121,26 @@ namespace HealthMed.AgendaConsulta.Test.Unitario.HealthMed.AgendaConsulta.Applic
             int id = 1;
             var json = @"{
               ""trabalhaDomingo"": true,
-              ""inicioDomingo"": ""2024-08-01T01:25:38.363Z"",
-              ""fimDomingo"": ""2024-08-01T03:25:38.363Z"",
+              ""inicioDomingo"": ""01:25:38"",
+              ""fimDomingo"": ""03:25:38"",
               ""trabalhaSegunda"": true,
-              ""inicioSegunda"": ""2024-08-01T01:25:38.363Z"",
-              ""fimSegunda"": ""2024-08-01T03:25:38.363Z"",
+              ""inicioSegunda"": ""01:25:38"",
+              ""fimSegunda"": ""03:25:38"",
               ""trabalhaTerca"": true,
-              ""inicioTerca"": ""2024-08-01T01:25:38.363Z"",
-              ""fimTerca"": ""2024-08-01T03:25:38.363Z"",
+              ""inicioTerca"": ""01:25:38"",
+              ""fimTerca"": ""03:25:38"",
               ""trabalhaQuarta"": true,
-              ""inicioQuarta"": ""2024-08-01T01:25:38.363Z"",
-              ""fimQuarta"": ""2024-08-01T03:25:38.363Z"",
+              ""inicioQuarta"": ""01:25:38"",
+              ""fimQuarta"": ""03:25:38"",
               ""trabalhaQuinta"": true,
-              ""inicioQuinta"": ""2024-08-01T01:25:38.363Z"",
-              ""fimQuinta"": ""2024-08-01T03:25:38.363Z"",
+              ""inicioQuinta"": ""01:25:38"",
+              ""fimQuinta"": ""03:25:38"",
               ""trabalhaSexta"": true,
-              ""inicioSexta"": ""2024-08-01T01:25:38.363Z"",
-              ""fimSexta"": ""2024-08-01T03:25:38.363Z"",
+              ""inicioSexta"": ""01:25:38"",
+              ""fimSexta"": ""03:25:38"",
               ""trabalhaSabado"": true,
-              ""inicioSabado"": ""2024-08-01T01:25:38.363Z"",
-              ""fimSabado"": ""2024-08-01T03:25:38.363Z""
+              ""inicioSabado"": ""01:25:38"",
+              ""fimSabado"": ""03:25:38""
             }";
             var expedienteMock = JsonConvert.DeserializeObject<EditaExpedienteViewModel>(json);
             var expediente = _fixture.Create<HorarioExpediente>();
@@ -162,8 +162,8 @@ namespace HealthMed.AgendaConsulta.Test.Unitario.HealthMed.AgendaConsulta.Applic
             var expedienteMock = new EditaExpedienteViewModel
             {
                 TrabalhaDomingo = true,
-                InicioDomingo = DateTime.MaxValue,
-                FimDomingo = DateTime.MinValue
+                InicioDomingo = TimeOnly.MaxValue,
+                FimDomingo = TimeOnly.MinValue
             };
 
             // Act

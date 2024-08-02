@@ -8,6 +8,7 @@ namespace HealthMed.AgendaConsulta.Domain.Interfaces.Repositories
     {
         Task<Medico?> Autenticar(Credencial credencial);
         Task<ICollection<Medico>> ObterPor(Expression<Func<Medico, bool>> predicate);
+        Task<Medico?> ObterMedicoConsultasPorId(int id);
         Task<ICollection<Medico>> ObterPorDiaTrabalhado(DayOfWeek diaSemana);
     }
 }

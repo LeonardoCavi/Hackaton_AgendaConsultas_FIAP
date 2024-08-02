@@ -2,7 +2,9 @@
 {
     public class BuscaMedicoViewModel
     {
-        public DateTime Dia { get; set; }
-        public List<Domain.Entities.Medico> Medicos { get; set; }
+        public int Id { get; set; }
+        public string Nome { get; set; }
+        public string NumeroCRM { get; set; }
+        public List<TimeOnly> HorariosDisponiveis { get; set; }
     }
 }

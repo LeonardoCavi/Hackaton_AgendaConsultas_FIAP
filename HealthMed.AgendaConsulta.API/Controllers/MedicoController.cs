@@ -72,7 +72,7 @@ namespace HealthMed.AgendaConsulta.API.Controllers
                     return StatusCode(resposta.StatusCode, resposta);
                 }
 
-                return Ok();
+                return Ok("Horários de expediente alterados com sucesso!");
             }
             catch (Exception ex)
             {

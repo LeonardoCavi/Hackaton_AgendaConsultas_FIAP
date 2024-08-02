@@ -26,10 +26,17 @@ namespace HealthMed.AgendaConsulta.Infra.Repositories
         {
             return await _dBSet
                 .Include(x => x.Credencial)
-                .Include(x => x.HorarioExpediente)
-                .Include(x => x.Consultas)
                 .Where(predicate)
                 .ToListAsync();
+        }
+
+        public async Task<Medico?> ObterMedicoConsultasPorId(int id)
+        {
+            return await _dBSet
+                .Include(x => x.HorarioExpediente)
+                .Include(x => x.Consultas)
+                .Where(x => x.Id == id)
+                .FirstOrDefaultAsync();
         }
 
         public async Task<ICollection<Medico>> ObterPorDiaTrabalhado(DayOfWeek diaSemana)

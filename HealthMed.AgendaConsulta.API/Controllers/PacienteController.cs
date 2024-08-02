@@ -49,7 +49,7 @@ namespace HealthMed.AgendaConsulta.API.Controllers
                     return StatusCode(resposta.StatusCode, resposta);
                 }
 
-                return Created();
+                return Created("", "Paciente cadastrado com sucesso!");
             }
             catch (Exception ex)
             {
@@ -72,7 +72,7 @@ namespace HealthMed.AgendaConsulta.API.Controllers
                     return StatusCode(resposta.StatusCode, resposta);
                 }
 
-                return Created();
+                return Ok(retorno);
             }
             catch (Exception ex)
             {
@@ -87,7 +87,7 @@ namespace HealthMed.AgendaConsulta.API.Controllers
         {
             try
             {
-                var retorno = await applicationService.AgendarConsulta(id, agendaConsulta);
+                await applicationService.AgendarConsulta(id, agendaConsulta);
 
                 if (notificador.TemNotificacao())
                 {
@@ -95,7 +95,7 @@ namespace HealthMed.AgendaConsulta.API.Controllers
                     return StatusCode(resposta.StatusCode, resposta);
                 }
 
-                return Created();
+                return Created("", "Consulta agendada com sucesso!");
             }
             catch (Exception ex)
             {

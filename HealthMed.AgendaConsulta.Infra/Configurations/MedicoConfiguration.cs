@@ -27,32 +27,32 @@ namespace HealthMed.AgendaConsulta.Infra.Configurations
             {
                 horarioExpedienteBuilder.ToTable("MedicoHorarioExpediente");
                 horarioExpedienteBuilder.Property(h => h.TrabalhaDomingo).HasColumnType("BIT").IsRequired();
-                horarioExpedienteBuilder.Property(h => h.InicioDomingo).HasColumnType("DATETIME2").IsRequired();
-                horarioExpedienteBuilder.Property(h => h.FimDomingo).HasColumnType("DATETIME2").IsRequired();
+                horarioExpedienteBuilder.Property(h => h.InicioDomingo).HasColumnType("TIME").IsRequired();
+                horarioExpedienteBuilder.Property(h => h.FimDomingo).HasColumnType("TIME").IsRequired();
 
                 horarioExpedienteBuilder.Property(h => h.TrabalhaSegunda).HasColumnType("BIT").IsRequired();
-                horarioExpedienteBuilder.Property(h => h.InicioSegunda).HasColumnType("DATETIME2").IsRequired();
-                horarioExpedienteBuilder.Property(h => h.FimSegunda).HasColumnType("DATETIME2").IsRequired();
+                horarioExpedienteBuilder.Property(h => h.InicioSegunda).HasColumnType("TIME").IsRequired();
+                horarioExpedienteBuilder.Property(h => h.FimSegunda).HasColumnType("TIME").IsRequired();
 
                 horarioExpedienteBuilder.Property(h => h.TrabalhaTerca).HasColumnType("BIT").IsRequired();
-                horarioExpedienteBuilder.Property(h => h.InicioTerca).HasColumnType("DATETIME2").IsRequired();
-                horarioExpedienteBuilder.Property(h => h.FimTerca).HasColumnType("DATETIME2").IsRequired();
+                horarioExpedienteBuilder.Property(h => h.InicioTerca).HasColumnType("TIME").IsRequired();
+                horarioExpedienteBuilder.Property(h => h.FimTerca).HasColumnType("TIME").IsRequired();
 
                 horarioExpedienteBuilder.Property(h => h.TrabalhaQuarta).HasColumnType("BIT").IsRequired();
-                horarioExpedienteBuilder.Property(h => h.InicioQuarta).HasColumnType("DATETIME2").IsRequired();
-                horarioExpedienteBuilder.Property(h => h.FimQuarta).HasColumnType("DATETIME2").IsRequired();
+                horarioExpedienteBuilder.Property(h => h.InicioQuarta).HasColumnType("TIME").IsRequired();
+                horarioExpedienteBuilder.Property(h => h.FimQuarta).HasColumnType("TIME").IsRequired();
 
                 horarioExpedienteBuilder.Property(h => h.TrabalhaQuinta).HasColumnType("BIT").IsRequired();
-                horarioExpedienteBuilder.Property(h => h.InicioQuinta).HasColumnType("DATETIME2").IsRequired();
-                horarioExpedienteBuilder.Property(h => h.FimQuinta).HasColumnType("DATETIME2").IsRequired();
+                horarioExpedienteBuilder.Property(h => h.InicioQuinta).HasColumnType("TIME").IsRequired();
+                horarioExpedienteBuilder.Property(h => h.FimQuinta).HasColumnType("TIME").IsRequired();
 
                 horarioExpedienteBuilder.Property(h => h.TrabalhaSexta).HasColumnType("BIT").IsRequired();
-                horarioExpedienteBuilder.Property(h => h.InicioSexta).HasColumnType("DATETIME2").IsRequired();
-                horarioExpedienteBuilder.Property(h => h.FimSexta).HasColumnType("DATETIME2").IsRequired();
+                horarioExpedienteBuilder.Property(h => h.InicioSexta).HasColumnType("TIME").IsRequired();
+                horarioExpedienteBuilder.Property(h => h.FimSexta).HasColumnType("TIME").IsRequired();
 
                 horarioExpedienteBuilder.Property(h => h.TrabalhaSabado).HasColumnType("BIT").IsRequired();
-                horarioExpedienteBuilder.Property(h => h.InicioSabado).HasColumnType("DATETIME2").IsRequired();
-                horarioExpedienteBuilder.Property(h => h.FimSabado).HasColumnType("DATETIME2").IsRequired();
+                horarioExpedienteBuilder.Property(h => h.InicioSabado).HasColumnType("TIME").IsRequired();
+                horarioExpedienteBuilder.Property(h => h.FimSabado).HasColumnType("TIME").IsRequired();
             });
 
             builder.HasMany(m => m.Consultas);

@@ -55,19 +55,16 @@ namespace HealthMed.AgendaConsulta.Application.Services
             return medicos;
         }
 
-        public async Task<string> AgendarConsulta(int id, AgendaConsultaViewModel agendaConsulta)
+        public async Task AgendarConsulta(int id, AgendaConsultaViewModel agendaConsulta)
         {
             ExecutarValidacao(new AgendaConsultaValidation(), agendaConsulta);
 
-            if (!notificador.TemNotificacao())
-            {
-                var consultaMap = mapper.Map<Consulta>(agendaConsulta);
-                consultaMap.PacienteId = id;
+            if (notificador.TemNotificacao())
+                return;
 
-                return await service.AgendarConsulta(consultaMap);
-            }
-
-            return string.Empty;
+            var consultaMap = mapper.Map<Consulta>(agendaConsulta);
+            consultaMap.PacienteId = id;
+            await service.AgendarConsulta(consultaMap);
         }
     }
 }
