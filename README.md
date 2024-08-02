@@ -82,8 +82,7 @@
 -- ➤ 2. Criação de testes unitários para facilitar a validação.</br>
 
 <h2 align="left">🧫 Testes</h3>
-[Em Andamento...]</br>
-➤ <a href="https://leonardocavi.github.io/TC4_CA_AudioGeraImagem_FIAP/AudioGeraImagemAPI/AudioGeraImagemAPI.Test/coveragereport/index.html"> Testes de Cobertura da API</a></br>
+➤ <a href="https://leonardocavi.github.io/Hackaton_AgendaConsultas_FIAP/HealthMed.AgendaConsulta.Test/coveragereport/index.html"> Testes de Cobertura da API</a></br>
 
 <h2 align="left">🦠 Documentação do Projeto</h2>
 <h4 align="left">Projeto - HealthMed.AgendaConsulta.API</h4>
