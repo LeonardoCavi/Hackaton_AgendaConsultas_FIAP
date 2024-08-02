@@ -6,9 +6,11 @@ using HealthMed.AgendaConsulta.Domain.Interfaces.Services;
 using HealthMed.AgendaConsulta.Domain.Notifications;
 using HealthMed.AgendaConsulta.Domain.Services;
 using HealthMed.AgendaConsulta.Infra.Repositories;
+using System.Diagnostics.CodeAnalysis;
 
 namespace HealthMed.AgendaConsulta.API.Configurations
 {
+    [ExcludeFromCodeCoverage]
     public static class DependencyInjectionConfiguration
     {
         public static void AddDependencyInjection(this IServiceCollection services)

@@ -1,9 +1,11 @@
 ﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
+using System.Diagnostics.CodeAnalysis;
 using System.Text;
 
 namespace HealthMed.AgendaConsulta.API.Configurations
 {
+    [ExcludeFromCodeCoverage]
     public static class AutenticationConfiguration
     {
         public static void AddAutenticationConfiguration(this IServiceCollection services,
