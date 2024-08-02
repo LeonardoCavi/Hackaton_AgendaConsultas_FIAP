@@ -6,7 +6,6 @@ using HealthMed.AgendaConsulta.Application.ViewModels.Medico;
 using HealthMed.AgendaConsulta.Domain.Entities.ValueObject;
 using HealthMed.AgendaConsulta.Domain.Interfaces.Notifications;
 using HealthMed.AgendaConsulta.Domain.Notifications;
-using HealthMed.AgendaConsulta.Domain.Notifications.Abstract;
 using HealthMed.AgendaConsulta.Test.Fake;
 using Microsoft.AspNetCore.Mvc;
 using NSubstitute;
@@ -178,7 +177,7 @@ namespace HealthMed.AgendaConsulta.Test.Unitario.HealthMed.AgendaConsulta.API.Co
 
             // Act
             var resultado = await _controller.EditarExpediente(id, expedienteMock);
-            var okResult = resultado as OkResult;
+            var okResult = resultado as OkObjectResult;
 
             // Assert
             Assert.NotNull(okResult);

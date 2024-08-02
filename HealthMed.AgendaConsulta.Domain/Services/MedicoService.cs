@@ -28,7 +28,7 @@ namespace HealthMed.AgendaConsulta.Domain.Services
 
         public async Task Cadastrar(Medico medico)
         {
-            var medicoDb = await repository.ObterPor(m => 
+            var medicoDb = await repository.ObterPor(m =>
                 m.NumeroCRM == medico.NumeroCRM ||
                 m.CPF == medico.CPF ||
                 m.Credencial.Email == medico.Credencial.Email);

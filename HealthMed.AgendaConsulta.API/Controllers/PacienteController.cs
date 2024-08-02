@@ -12,7 +12,7 @@ namespace HealthMed.AgendaConsulta.API.Controllers
     [ApiController]
     public class PacienteController(IMapper mapper,
                                     IPacienteApplicationService applicationService,
-                                    INotificador notificador)  : ControllerBase
+                                    INotificador notificador) : ControllerBase
     {
         [HttpPost("autenticar")]
         public async Task<IActionResult> Autenticar(AutenticacaoViewModel autenticacao)

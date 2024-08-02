@@ -4,7 +4,7 @@ using System.Linq.Expressions;
 
 namespace HealthMed.AgendaConsulta.Domain.Interfaces.Repositories
 {
-    public interface IPacienteRepository: IEntidadeBaseRepository<Paciente>
+    public interface IPacienteRepository : IEntidadeBaseRepository<Paciente>
     {
         Task<Paciente?> Autenticar(Credencial credencial);
         Task<ICollection<Paciente>> ObterPor(Expression<Func<Paciente, bool>> predicate);

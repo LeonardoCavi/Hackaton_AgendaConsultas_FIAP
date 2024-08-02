@@ -1,7 +1,9 @@
 ﻿using HealthMed.AgendaConsulta.Domain.Entities.ValueObject;
+using System.Diagnostics.CodeAnalysis;
 
 namespace HealthMed.AgendaConsulta.Domain.Entities
 {
+    [ExcludeFromCodeCoverage]
     public class Medico : EntidadeBase
     {
         public string Nome { get; set; }

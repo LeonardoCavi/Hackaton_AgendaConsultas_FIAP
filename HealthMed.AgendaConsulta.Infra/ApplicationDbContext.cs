@@ -1,9 +1,11 @@
 ﻿using HealthMed.AgendaConsulta.Domain.Entities;
 using HealthMed.AgendaConsulta.Infra.Configurations;
 using Microsoft.EntityFrameworkCore;
+using System.Diagnostics.CodeAnalysis;
 
 namespace HealthMed.AgendaConsulta.Infra
 {
+    [ExcludeFromCodeCoverage]
     public class ApplicationDbContext : DbContext
     {
         public ApplicationDbContext(DbContextOptions options) : base(options)

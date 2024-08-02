@@ -1,5 +1,8 @@
-﻿namespace HealthMed.AgendaConsulta.Domain.Entities
+﻿using System.Diagnostics.CodeAnalysis;
+
+namespace HealthMed.AgendaConsulta.Domain.Entities
 {
+    [ExcludeFromCodeCoverage]
     public class Consulta : EntidadeBase
     {
         public DateTime Inicio { get; set; }

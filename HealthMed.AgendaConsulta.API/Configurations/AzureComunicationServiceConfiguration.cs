@@ -7,7 +7,7 @@ namespace HealthMed.AgendaConsulta.API.Configurations
     public static class AzureComunicationServiceConfiguration
     {
         public static void AddAzureComunicationServiceConfiguration(this IServiceCollection services,
-                                                                    IConfiguration configuration) 
+                                                                    IConfiguration configuration)
         {
             var connectionString = configuration
                 .GetRequiredSection("AzureCommunicationService")["ConnectionString"] ?? string.Empty;

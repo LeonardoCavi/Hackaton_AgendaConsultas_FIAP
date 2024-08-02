@@ -21,7 +21,7 @@ namespace HealthMed.AgendaConsulta.Domain.Services
                 Subject = new ClaimsIdentity(new Claim[]
                 {
                     new Claim(ClaimTypes.Name, usuario),
-                    new Claim(ClaimTypes.Role, tipoCredencial.ToString()) 
+                    new Claim(ClaimTypes.Role, tipoCredencial.ToString())
                 }),
                 Expires = DateTime.UtcNow.AddHours(expiresIn),
                 SigningCredentials = new SigningCredentials(
