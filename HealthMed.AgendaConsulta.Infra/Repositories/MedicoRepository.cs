@@ -23,13 +23,6 @@ namespace HealthMed.AgendaConsulta.Infra.Repositories
         public async Task<ICollection<Medico>> ObterPor(Expression<Func<Medico, bool>> predicate)
         {
             return await _dBSet
-                .Where(predicate)
-                .ToListAsync();
-        }
-
-        public async Task<ICollection<Medico>> ObterPor(Expression<Func<Medico, bool>> predicate)
-        {
-            return await _dBSet
                 .Include(x => x.Credencial)
                 .Include(x => x.HorarioExpediente)
                 .Include(x => x.Consultas)

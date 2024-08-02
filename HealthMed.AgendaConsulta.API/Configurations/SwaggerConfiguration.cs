@@ -1,9 +1,11 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerGen;
+using System.Diagnostics.CodeAnalysis;
 
 namespace HealthMed.AgendaConsulta.API.Configurations
 {
+    [ExcludeFromCodeCoverage]
     public static class SwaggerConfiguration
     {
         public static void AddSwaggerConfiguration(this IServiceCollection services)
@@ -36,6 +38,7 @@ namespace HealthMed.AgendaConsulta.API.Configurations
         }
     }
 
+    [ExcludeFromCodeCoverage]
     public class AuthorizationOperationFilter : IOperationFilter
     {
         public void Apply(OpenApiOperation operation, OperationFilterContext context)
