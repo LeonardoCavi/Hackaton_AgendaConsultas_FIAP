@@ -8,12 +8,12 @@ namespace HealthMed.AgendaConsulta.Application.Validations.Paciente
         public AgendaConsultaValidation()
         {
             RuleFor(a => a.InicioConsulta)
-                .GreaterThan(DateTime.MinValue)
-                .WithMessage("{PropertyPath}: o campo {PropertyName} não pode ser maior que o campo {ComparisonProperty}");
+                .GreaterThan(DateTime.Now)
+                .WithMessage("{PropertyPath}: o campo {PropertyName} não pode ser no passado");
 
             RuleFor(e => e.MedicoId)
                 .GreaterThan(0)
-                .WithMessage("{PropertyPath}: o campo {PropertyName} não pode ser maior que o campo {ComparisonProperty}");
+                .WithMessage("{PropertyPath}: o campo {PropertyName} não pode ser menor ou igual a zero");
         }
     }
 }

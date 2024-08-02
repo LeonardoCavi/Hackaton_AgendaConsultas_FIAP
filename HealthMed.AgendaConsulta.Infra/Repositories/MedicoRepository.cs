@@ -31,6 +31,7 @@ namespace HealthMed.AgendaConsulta.Infra.Repositories
         public async Task<Medico?> ObterMedicoConsultasPorId(int id)
         {
             return await _dBSet
+                .Include(x => x.Credencial)
                 .Include(x => x.HorarioExpediente)
                 .Include(x => x.Consultas)
                 .Where(x => x.Id == id)

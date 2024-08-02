@@ -18,6 +18,7 @@ builder.Services.AddDbContextConfiguration(builder.Configuration);
 builder.Services.AddParameters(builder.Configuration);
 builder.Services.AddAutenticationConfiguration(builder.Configuration);
 builder.Services.AddDependencyInjection();
+builder.Services.AddAzureComunicationServiceConfiguration(builder.Configuration);
 builder.Services.AddSwaggerConfiguration();
 
 var app = builder.Build();

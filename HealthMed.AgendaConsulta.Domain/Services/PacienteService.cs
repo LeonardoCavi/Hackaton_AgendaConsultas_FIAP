@@ -6,6 +6,7 @@ using HealthMed.AgendaConsulta.Domain.Entities.ValueObject;
 using HealthMed.AgendaConsulta.Domain.Interfaces.Notifications;
 using HealthMed.AgendaConsulta.Domain.Interfaces.Repositories;
 using HealthMed.AgendaConsulta.Domain.Interfaces.Services;
+using HealthMed.AgendaConsulta.Domain.Interfaces.Vendor;
 using HealthMed.AgendaConsulta.Domain.Notifications;
 using HealthMed.AgendaConsulta.Domain.Notifications.Abstract;
 
@@ -15,7 +16,8 @@ namespace HealthMed.AgendaConsulta.Domain.Services
                                  IConsultaRepository consultaRepository,
                                  IPacienteRepository pacienteRepository,
                                  IMedicoRepository medicoRepository,
-                                 INotificador notificador) : NotificadorContext(notificador), IPacienteService
+                                 INotificador notificador, 
+                                 IEmailManager emailManager) : NotificadorContext(notificador), IPacienteService
     {
         public async Task<TokenAcesso> Autenticar(Credencial credencial)
         {
@@ -84,6 +86,8 @@ namespace HealthMed.AgendaConsulta.Domain.Services
                 return;
 
             await consultaRepository.Inserir(consulta);
+
+            await emailManager.SendEmailNotification(pacienteDb.Nome, medicoDb.Nome, medicoDb.Credencial.Email, consulta.Inicio);
         }
 
         private void ValidarDisponibilidadeAgendamento(Medico medico, Paciente paciente, Consulta consulta)
@@ -100,6 +104,7 @@ namespace HealthMed.AgendaConsulta.Domain.Services
 
                 if (medico.Consultas.Any(x => x.Inicio == consulta.Inicio))
                     Notificar($"AgendarConsulta: médico já possui uma consulta agendada nesse horário", TipoNotificacao.Validation);
+
                 else if (!intervalosExpediente.Any(x => x == TimeOnly.FromDateTime(consulta.Inicio)))
                     Notificar($"AgendarConsulta: horário de início selecionado é inválido e não se encaixa na agenda do médico", TipoNotificacao.Validation);
             }
@@ -107,7 +112,7 @@ namespace HealthMed.AgendaConsulta.Domain.Services
 
         private List<TimeOnly> ObtemIntervalosExpediente(DateTime dia, HorarioExpediente horarioExpediente)
         {
-            return dia.DayOfWeek switch
+            var intervalos = dia.DayOfWeek switch
             {
                 DayOfWeek.Saturday => Enumerable.Range(0, ((int)(horarioExpediente.FimSabado - horarioExpediente.InicioSabado).TotalMinutes / ConsultaConstants.TempoConsultaEmMinutos) + 1)
                                   .Select(i => horarioExpediente.InicioSabado.AddMinutes(i * ConsultaConstants.TempoConsultaEmMinutos)).ToList(),
@@ -125,6 +130,10 @@ namespace HealthMed.AgendaConsulta.Domain.Services
                                    .Select(i => horarioExpediente.InicioDomingo.AddMinutes(i * ConsultaConstants.TempoConsultaEmMinutos)).ToList(),
                 _ => new List<TimeOnly>()
             };
+
+            intervalos.Remove(intervalos.Last());
+
+            return intervalos;
         }
     }
 }

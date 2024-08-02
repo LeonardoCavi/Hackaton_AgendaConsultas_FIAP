@@ -6,22 +6,22 @@ using Microsoft.Extensions.Azure;
 
 namespace HealthMed.AgendaConsulta.Infra.Vendor
 {
-    public class NotificationManager(IAzureClientFactory<EmailClient> azureClientFactory,
-                                     AzureComunicationServiceParameters parameters) : INotificationManager
+    public class EmailManager(IAzureClientFactory<EmailClient> azureClientFactory,
+                                     AzureComunicationServiceParameters parameters) : IEmailManager
     {
-        public async Task SendEmailNotification(string paciente,
-                                                string prestador,
+        public async Task SendEmailNotification(string nomePaciente,
+                                                string nomeMedico,
                                                 string destinatario,
                                                 DateTime dataAgendamento)
         {
-            EmailClient _email = azureClientFactory.CreateClient("MyComunicationService");
+            EmailClient _email = azureClientFactory.CreateClient("MyCommunicationService");
 
             var titulo = "Health Med - Nova Consulta Agendada";
             var corpo = @$"<html>
                         <body>
-                            <p>Olá, Dr. {prestador}!</p>
+                            <p>Olá, Dr. {nomeMedico}!</p>
                             <p>Você tem uma nova consulta marcada!</p>
-                            <p>Paciente: {paciente}.</p>
+                            <p>Paciente: {nomePaciente}.</p>
                             <p>Data e horário: {dataAgendamento.Date.ToString("dd/MM/yyyy")} às {dataAgendamento.TimeOfDay.ToString(@"hh\:mm\:ss")}.</p>
                         </body>
                       </html>";
