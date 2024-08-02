@@ -125,10 +125,20 @@ namespace HealthMed.AgendaConsulta.Test.Unitario.HealthMed.AgendaConsulta.Domain
         {
             // Arrange
             int id = 1;
-            var expediente = _fixture.Create<HorarioExpediente>();
+            var expediente = new HorarioExpediente()
+            {
+                TrabalhaSabado = true,
+                TrabalhaSegunda = true,
+                TrabalhaTerca = true,
+                TrabalhaQuarta = true,
+                TrabalhaQuinta = true,
+                TrabalhaSexta = true,
+                TrabalhaDomingo = true,
+            };
             var medico = _fixture.Create<Medico>();
+            medico.HorarioExpediente = expediente;
 
-            _repository.Obter(id).Returns(medico);
+            _repository.ObterMedicoConsultasPorId(id).Returns(medico);
 
             // Act
             await _service.EditarExpediente(id, expediente);

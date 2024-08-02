@@ -1,8 +1,5 @@
-﻿using System.Diagnostics.CodeAnalysis;
-
-namespace HealthMed.AgendaConsulta.Application.ViewModels.Medico
+﻿namespace HealthMed.AgendaConsulta.Application.ViewModels.Medico
 {
-    [ExcludeFromCodeCoverage]
     public class CadastraMedicoViewModel
     {
         public string Nome { get; set; }

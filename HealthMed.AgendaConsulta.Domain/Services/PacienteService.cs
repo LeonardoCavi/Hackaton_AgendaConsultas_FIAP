@@ -16,7 +16,7 @@ namespace HealthMed.AgendaConsulta.Domain.Services
                                  IConsultaRepository consultaRepository,
                                  IPacienteRepository pacienteRepository,
                                  IMedicoRepository medicoRepository,
-                                 INotificador notificador, 
+                                 INotificador notificador,
                                  IEmailManager emailManager) : NotificadorContext(notificador), IPacienteService
     {
         public async Task<TokenAcesso> Autenticar(Credencial credencial)

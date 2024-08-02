@@ -1,8 +1,5 @@
-﻿using System.Diagnostics.CodeAnalysis;
-
-namespace HealthMed.AgendaConsulta.Application.ViewModels.Medico
+﻿namespace HealthMed.AgendaConsulta.Application.ViewModels.Medico
 {
-    [ExcludeFromCodeCoverage]
     public class EditaExpedienteViewModel
     {
         public bool TrabalhaDomingo { get; set; }

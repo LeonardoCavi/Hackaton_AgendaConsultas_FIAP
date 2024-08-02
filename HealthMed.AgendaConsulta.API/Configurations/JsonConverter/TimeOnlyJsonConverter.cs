@@ -1,8 +1,10 @@
-﻿using System.Text.Json.Serialization;
+﻿using System.Diagnostics.CodeAnalysis;
 using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace HealthMed.AgendaConsulta.API.Configurations.JsonConverter
 {
+    [ExcludeFromCodeCoverage]
     public class TimeOnlyJsonConverter : JsonConverter<TimeOnly>
     {
         private readonly string _timeFormat = "HH:mm:ss";

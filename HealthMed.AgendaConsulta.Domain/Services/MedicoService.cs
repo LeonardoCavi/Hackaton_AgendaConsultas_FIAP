@@ -71,19 +71,19 @@ namespace HealthMed.AgendaConsulta.Domain.Services
                 && medico.Consultas.Any(x => x.Inicio.DayOfWeek == DayOfWeek.Monday && x.Inicio >= DateTime.Now))
                 Notificar("EditarExpediente: não é permitido alterar o horário expediente da segunda-feira enquanto houverem consultas agendadas", TipoNotificacao.Validation);
 
-            if((!horarioExpediente.TrabalhaTerca || horarioExpediente.InicioTerca != medico.HorarioExpediente.InicioTerca || horarioExpediente.FimTerca != medico.HorarioExpediente.FimTerca)
+            if ((!horarioExpediente.TrabalhaTerca || horarioExpediente.InicioTerca != medico.HorarioExpediente.InicioTerca || horarioExpediente.FimTerca != medico.HorarioExpediente.FimTerca)
                 && medico.Consultas.Any(x => x.Inicio.DayOfWeek == DayOfWeek.Tuesday && x.Inicio >= DateTime.Now))
                 Notificar("EditarExpediente: não é permitido alterar o horário expediente da terça-feira enquanto houverem consultas agendadas", TipoNotificacao.Validation);
 
-            if((!horarioExpediente.TrabalhaQuarta || horarioExpediente.InicioQuarta != medico.HorarioExpediente.InicioQuarta || horarioExpediente.FimQuarta != medico.HorarioExpediente.FimQuarta)
+            if ((!horarioExpediente.TrabalhaQuarta || horarioExpediente.InicioQuarta != medico.HorarioExpediente.InicioQuarta || horarioExpediente.FimQuarta != medico.HorarioExpediente.FimQuarta)
                 && medico.Consultas.Any(x => x.Inicio.DayOfWeek == DayOfWeek.Wednesday && x.Inicio >= DateTime.Now))
                 Notificar("EditarExpediente: não é permitido alterar o horário expediente da quarta-feira enquanto houverem consultas agendadas", TipoNotificacao.Validation);
 
-            if((!horarioExpediente.TrabalhaQuinta || horarioExpediente.InicioQuinta != medico.HorarioExpediente.InicioQuinta || horarioExpediente.FimQuinta != medico.HorarioExpediente.FimQuinta)
+            if ((!horarioExpediente.TrabalhaQuinta || horarioExpediente.InicioQuinta != medico.HorarioExpediente.InicioQuinta || horarioExpediente.FimQuinta != medico.HorarioExpediente.FimQuinta)
                 && medico.Consultas.Any(x => x.Inicio.DayOfWeek == DayOfWeek.Thursday && x.Inicio >= DateTime.Now))
                 Notificar("EditarExpediente: não é permitido alterar o horário expediente da quinta-feira enquanto houverem consultas agendadas", TipoNotificacao.Validation);
 
-            if((!horarioExpediente.TrabalhaSexta || horarioExpediente.InicioSexta != medico.HorarioExpediente.InicioSexta || horarioExpediente.FimSexta != medico.HorarioExpediente.FimSexta)
+            if ((!horarioExpediente.TrabalhaSexta || horarioExpediente.InicioSexta != medico.HorarioExpediente.InicioSexta || horarioExpediente.FimSexta != medico.HorarioExpediente.FimSexta)
                 && medico.Consultas.Any(x => x.Inicio.DayOfWeek == DayOfWeek.Friday && x.Inicio >= DateTime.Now))
                 Notificar("EditarExpediente: não é permitido alterar o horário expediente da sexta-feira enquanto houverem consultas agendadas", TipoNotificacao.Validation);
 

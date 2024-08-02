@@ -1,5 +1,6 @@
 using HealthMed.AgendaConsulta.API.Configurations;
 using HealthMed.AgendaConsulta.API.Configurations.JsonConverter;
+using System.Diagnostics.CodeAnalysis;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -32,3 +33,6 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+[ExcludeFromCodeCoverage]
+public static partial class Program { }

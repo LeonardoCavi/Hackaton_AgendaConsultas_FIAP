@@ -12,7 +12,7 @@ using HealthMed.AgendaConsulta.Domain.Notifications.Abstract;
 
 namespace HealthMed.AgendaConsulta.Application.Services
 {
-    public class PacienteApplicationServic(IMapper mapper,
+    public class PacienteApplicationService(IMapper mapper,
                                            IPacienteService service,
                                            INotificador notificador) : NotificadorContext(notificador), IPacienteApplicationService
     {

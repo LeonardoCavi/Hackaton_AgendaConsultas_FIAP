@@ -3,11 +3,9 @@ using HealthMed.AgendaConsulta.Application.ViewModels.Paciente;
 using HealthMed.AgendaConsulta.Domain.Constants;
 using HealthMed.AgendaConsulta.Domain.Entities;
 using HealthMed.AgendaConsulta.Domain.Entities.Aggregates;
-using System.Diagnostics.CodeAnalysis;
 
 namespace HealthMed.AgendaConsulta.API.Mappers
 {
-    [ExcludeFromCodeCoverage]
     public class PacienteProfile : Profile
     {
         public PacienteProfile()

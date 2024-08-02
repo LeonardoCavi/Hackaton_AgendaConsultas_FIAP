@@ -1,12 +1,10 @@
 ﻿using AutoMapper;
 using HealthMed.AgendaConsulta.Application.ViewModels;
 using HealthMed.AgendaConsulta.Domain.Notifications;
-using System.Diagnostics.CodeAnalysis;
 using System.Net;
 
 namespace HealthMed.AgendaConsulta.API.Mappers
 {
-    [ExcludeFromCodeCoverage]
     public class ErroProfile : Profile
     {
         public ErroProfile()
@@ -25,7 +23,6 @@ namespace HealthMed.AgendaConsulta.API.Mappers
         }
     }
 
-    [ExcludeFromCodeCoverage]
     public class ErroMappingStatusCode : IValueResolver<IEnumerable<Notificacao>, ErroViewModel, int>
     {
         public int Resolve(IEnumerable<Notificacao> source, ErroViewModel destination, int destMember, ResolutionContext context)

@@ -32,7 +32,7 @@ namespace HealthMed.AgendaConsulta.API.Configurations
 
             //Application Services
             services.AddScoped<IMedicoApplicationService, MedicoApplicationService>();
-            services.AddScoped<IPacienteApplicationService, PacienteApplicationServic>();
+            services.AddScoped<IPacienteApplicationService, PacienteApplicationService>();
 
             //Notificador
             services.AddScoped<INotificador, Notificador>();

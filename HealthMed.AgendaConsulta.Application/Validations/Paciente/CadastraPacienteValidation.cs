@@ -13,7 +13,7 @@ namespace HealthMed.AgendaConsulta.Application.Validations.Paciente
 
             RuleFor(m => m.CPF)
                 .NotEmpty().WithMessage("{PropertyPath}: por favor, preencha o campo {PropertyName}")
-                .Length(3, 11).WithMessage("{PropertyPath}: o campo {PropertyName} precisa ter entre {MinLength} e {MaxLength} caracteres");
+                .Length(3, 100).WithMessage("{PropertyPath}: o campo {PropertyName} precisa ter entre {MinLength} e {MaxLength} caracteres");
 
             RuleFor(m => m.Email)
                 .NotEmpty().WithMessage("{PropertyPath}: por favor, preencha o campo {PropertyName}")
