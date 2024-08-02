@@ -1,9 +1,11 @@
 ﻿using HealthMed.AgendaConsulta.Domain.Entities;
 using HealthMed.AgendaConsulta.Infra.Configurations;
 using Microsoft.EntityFrameworkCore;
+using System.Diagnostics.CodeAnalysis;
 
 namespace HealthMed.AgendaConsulta.Infra
 {
+    [ExcludeFromCodeCoverage]
     public class ApplicationDbContext : DbContext
     {
         public ApplicationDbContext(DbContextOptions options) : base(options)
@@ -11,7 +13,7 @@ namespace HealthMed.AgendaConsulta.Infra
         }
 
         public DbSet<Medico> Medicos { get; set; }
-        public DbSet<Paciente> Eventos { get; set; }
+        public DbSet<Paciente> Pacientes { get; set; }
         public DbSet<Consulta> Usuarios { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

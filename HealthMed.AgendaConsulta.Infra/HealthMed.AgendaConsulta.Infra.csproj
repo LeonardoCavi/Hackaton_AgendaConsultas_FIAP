@@ -18,6 +18,7 @@
 		  <PrivateAssets>all</PrivateAssets>
 		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
+		<PackageReference Include="Microsoft.Extensions.Azure" Version="1.7.4" />
 	</ItemGroup>
 
 	<ItemGroup>
