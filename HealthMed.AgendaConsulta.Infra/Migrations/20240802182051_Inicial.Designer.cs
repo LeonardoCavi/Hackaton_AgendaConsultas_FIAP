@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HealthMed.AgendaConsulta.Infra.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240731233359_Inicial")]
+    [Migration("20240802182051_Inicial")]
     partial class Inicial
     {
         /// <inheritdoc />
@@ -143,47 +143,47 @@ namespace HealthMed.AgendaConsulta.Infra.Migrations
                             b1.Property<int>("MedicoId")
                                 .HasColumnType("int");
 
-                            b1.Property<DateTime>("FimDomingo")
-                                .HasColumnType("DATETIME2");
+                            b1.Property<TimeOnly>("FimDomingo")
+                                .HasColumnType("TIME");
 
-                            b1.Property<DateTime>("FimQuarta")
-                                .HasColumnType("DATETIME2");
+                            b1.Property<TimeOnly>("FimQuarta")
+                                .HasColumnType("TIME");
 
-                            b1.Property<DateTime>("FimQuinta")
-                                .HasColumnType("DATETIME2");
+                            b1.Property<TimeOnly>("FimQuinta")
+                                .HasColumnType("TIME");
 
-                            b1.Property<DateTime>("FimSabado")
-                                .HasColumnType("DATETIME2");
+                            b1.Property<TimeOnly>("FimSabado")
+                                .HasColumnType("TIME");
 
-                            b1.Property<DateTime>("FimSegunda")
-                                .HasColumnType("DATETIME2");
+                            b1.Property<TimeOnly>("FimSegunda")
+                                .HasColumnType("TIME");
 
-                            b1.Property<DateTime>("FimSexta")
-                                .HasColumnType("DATETIME2");
+                            b1.Property<TimeOnly>("FimSexta")
+                                .HasColumnType("TIME");
 
-                            b1.Property<DateTime>("FimTerca")
-                                .HasColumnType("DATETIME2");
+                            b1.Property<TimeOnly>("FimTerca")
+                                .HasColumnType("TIME");
 
-                            b1.Property<DateTime>("InicioDomingo")
-                                .HasColumnType("DATETIME2");
+                            b1.Property<TimeOnly>("InicioDomingo")
+                                .HasColumnType("TIME");
 
-                            b1.Property<DateTime>("InicioQuarta")
-                                .HasColumnType("DATETIME2");
+                            b1.Property<TimeOnly>("InicioQuarta")
+                                .HasColumnType("TIME");
 
-                            b1.Property<DateTime>("InicioQuinta")
-                                .HasColumnType("DATETIME2");
+                            b1.Property<TimeOnly>("InicioQuinta")
+                                .HasColumnType("TIME");
 
-                            b1.Property<DateTime>("InicioSabado")
-                                .HasColumnType("DATETIME2");
+                            b1.Property<TimeOnly>("InicioSabado")
+                                .HasColumnType("TIME");
 
-                            b1.Property<DateTime>("InicioSegunda")
-                                .HasColumnType("DATETIME2");
+                            b1.Property<TimeOnly>("InicioSegunda")
+                                .HasColumnType("TIME");
 
-                            b1.Property<DateTime>("InicioSexta")
-                                .HasColumnType("DATETIME2");
+                            b1.Property<TimeOnly>("InicioSexta")
+                                .HasColumnType("TIME");
 
-                            b1.Property<DateTime>("InicioTerca")
-                                .HasColumnType("DATETIME2");
+                            b1.Property<TimeOnly>("InicioTerca")
+                                .HasColumnType("TIME");
 
                             b1.Property<bool>("TrabalhaDomingo")
                                 .HasColumnType("BIT");
@@ -217,8 +217,7 @@ namespace HealthMed.AgendaConsulta.Infra.Migrations
                     b.Navigation("Credencial")
                         .IsRequired();
 
-                    b.Navigation("HorarioExpediente")
-                        .IsRequired();
+                    b.Navigation("HorarioExpediente");
                 });
 
             modelBuilder.Entity("HealthMed.AgendaConsulta.Domain.Entities.Paciente", b =>

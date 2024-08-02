@@ -9,31 +9,31 @@ namespace HealthMed.AgendaConsulta.Domain.Entities.ValueObject
     public class HorarioExpediente
     {
         public bool TrabalhaDomingo { get; set; }
-        public DateTime InicioDomingo { get; set; }
-        public DateTime FimDomingo { get; set; }
+        public TimeOnly InicioDomingo { get; set; }
+        public TimeOnly FimDomingo { get; set; }
 
         public bool TrabalhaSegunda { get; set; }
-        public DateTime InicioSegunda { get; set; }
-        public DateTime FimSegunda { get; set; }
+        public TimeOnly InicioSegunda { get; set; }
+        public TimeOnly FimSegunda { get; set; }
 
         public bool TrabalhaTerca { get; set; }
-        public DateTime InicioTerca { get; set; }
-        public DateTime FimTerca { get; set; }
+        public TimeOnly InicioTerca { get; set; }
+        public TimeOnly FimTerca { get; set; }
 
         public bool TrabalhaQuarta { get; set; }
-        public DateTime InicioQuarta { get; set; }
-        public DateTime FimQuarta { get; set; }
+        public TimeOnly InicioQuarta { get; set; }
+        public TimeOnly FimQuarta { get; set; }
 
         public bool TrabalhaQuinta { get; set; }
-        public DateTime InicioQuinta { get; set; }
-        public DateTime FimQuinta { get; set; }
+        public TimeOnly InicioQuinta { get; set; }
+        public TimeOnly FimQuinta { get; set; }
 
         public bool TrabalhaSexta { get; set; }
-        public DateTime InicioSexta { get; set; }
-        public DateTime FimSexta { get; set; }
+        public TimeOnly InicioSexta { get; set; }
+        public TimeOnly FimSexta { get; set; }
 
         public bool TrabalhaSabado { get; set; }
-        public DateTime InicioSabado { get; set; }
-        public DateTime FimSabado { get; set; }
+        public TimeOnly InicioSabado { get; set; }
+        public TimeOnly FimSabado { get; set; }
     }
 }

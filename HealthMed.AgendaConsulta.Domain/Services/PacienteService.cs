@@ -1,4 +1,6 @@
-﻿using HealthMed.AgendaConsulta.Domain.Entities;
+﻿using HealthMed.AgendaConsulta.Domain.Constants;
+using HealthMed.AgendaConsulta.Domain.Entities;
+using HealthMed.AgendaConsulta.Domain.Entities.Aggregates;
 using HealthMed.AgendaConsulta.Domain.Entities.Enums;
 using HealthMed.AgendaConsulta.Domain.Entities.ValueObject;
 using HealthMed.AgendaConsulta.Domain.Interfaces.Notifications;
@@ -10,6 +12,7 @@ using HealthMed.AgendaConsulta.Domain.Notifications.Abstract;
 namespace HealthMed.AgendaConsulta.Domain.Services
 {
     public class PacienteService(ITokenService tokenService,
+                                 IConsultaRepository consultaRepository,
                                  IPacienteRepository pacienteRepository,
                                  IMedicoRepository medicoRepository,
                                  INotificador notificador) : NotificadorContext(notificador), IPacienteService
@@ -35,28 +38,93 @@ namespace HealthMed.AgendaConsulta.Domain.Services
 
             if (pacienteDb.Any())
             {
-                Notificar($"Cadastrar: CPF e/ou Email já cadastrados na base.", TipoNotificacao.Validation);
+                Notificar($"Cadastrar: CPF e/ou Email já cadastrados na base", TipoNotificacao.Validation);
                 return;
             }
 
             await pacienteRepository.Inserir(paciente);
         }
 
-        public async Task<object> BuscarMedicos(DateTime dia)
+        public async Task<List<MedicoHorarioDisponivel>> BuscarMedicos(DateTime dia)
         {
-            var medicosAptos = new List<Medico>();
-            var medicos = await medicoRepository.ObterPorDiaTrabalhado(dia.DayOfWeek);
+            var medicosHorarioDisponiveis = new List<MedicoHorarioDisponivel>();
 
-            var medicosSemConsultas = medicos.Where(x => !x.Consultas.Any());
-            
-            var medicosComConsultas = medicos.Where(x => x.Consultas.Any());
+            var medicosDb = await medicoRepository.ObterPorDiaTrabalhado(dia.DayOfWeek);
 
-            return null;
+            if (!medicosDb.Any())
+            {
+                Notificar($"BuscarMedicos: não há médicos disponíveis nesse dia", TipoNotificacao.NotFound);
+                return medicosHorarioDisponiveis;
+            }
+
+            foreach (var medico in medicosDb)
+            {
+                var intervalosExpediente = ObtemIntervalosExpediente(dia, medico.HorarioExpediente);
+                var diaIntervalosExpediente = intervalosExpediente.Select(x => dia.Date.Add(x.ToTimeSpan()));
+                var intervalosSemConsulta = diaIntervalosExpediente.Except(medico.Consultas.Select(x => x.Inicio));
+
+                medicosHorarioDisponiveis.Add(new()
+                {
+                    Medico = medico,
+                    HorariosDisponiveis = intervalosSemConsulta.Select(TimeOnly.FromDateTime).ToList()
+                });
+            }
+
+            return medicosHorarioDisponiveis;
         }
 
-        public Task<string> AgendarConsulta(Consulta consulta)
+        public async Task AgendarConsulta(Consulta consulta)
         {
-            throw new NotImplementedException();
+            var medicoDb = await medicoRepository.ObterMedicoConsultasPorId(consulta.MedicoId);
+            var pacienteDb = await pacienteRepository.ObterPacienteConsultasPorId(consulta.PacienteId);
+
+            ValidarDisponibilidadeAgendamento(medicoDb, pacienteDb, consulta);
+
+            if (notificador.TemNotificacao())
+                return;
+
+            await consultaRepository.Inserir(consulta);
+        }
+
+        private void ValidarDisponibilidadeAgendamento(Medico medico, Paciente paciente, Consulta consulta)
+        {
+            if (paciente == null)
+                Notificar($"AgendarConsulta: paciente não encontrado", TipoNotificacao.Validation);
+            else if (paciente.Consultas.Any(x => x.Inicio == consulta.Inicio))
+                Notificar($"AgendarConsulta: paciente já possui uma consulta agendada nesse horário", TipoNotificacao.Validation);
+            else if (medico == null)
+                Notificar($"AgendarConsulta: médico não encontrado", TipoNotificacao.Validation);
+            else
+            {
+                var intervalosExpediente = ObtemIntervalosExpediente(consulta.Inicio, medico.HorarioExpediente);
+
+                if (medico.Consultas.Any(x => x.Inicio == consulta.Inicio))
+                    Notificar($"AgendarConsulta: médico já possui uma consulta agendada nesse horário", TipoNotificacao.Validation);
+                else if (!intervalosExpediente.Any(x => x == TimeOnly.FromDateTime(consulta.Inicio)))
+                    Notificar($"AgendarConsulta: horário de início selecionado é inválido e não se encaixa na agenda do médico", TipoNotificacao.Validation);
+            }
+        }
+
+        private List<TimeOnly> ObtemIntervalosExpediente(DateTime dia, HorarioExpediente horarioExpediente)
+        {
+            return dia.DayOfWeek switch
+            {
+                DayOfWeek.Saturday => Enumerable.Range(0, ((int)(horarioExpediente.FimSabado - horarioExpediente.InicioSabado).TotalMinutes / ConsultaConstants.TempoConsultaEmMinutos) + 1)
+                                  .Select(i => horarioExpediente.InicioSabado.AddMinutes(i * ConsultaConstants.TempoConsultaEmMinutos)).ToList(),
+                DayOfWeek.Monday => Enumerable.Range(0, ((int)(horarioExpediente.FimSegunda - horarioExpediente.InicioSegunda).TotalMinutes / ConsultaConstants.TempoConsultaEmMinutos) + 1)
+                                  .Select(i => horarioExpediente.InicioSegunda.AddMinutes(i * ConsultaConstants.TempoConsultaEmMinutos)).ToList(),
+                DayOfWeek.Tuesday => Enumerable.Range(0, ((int)(horarioExpediente.FimTerca - horarioExpediente.InicioTerca).TotalMinutes / ConsultaConstants.TempoConsultaEmMinutos) + 1)
+                                  .Select(i => horarioExpediente.InicioTerca.AddMinutes(i * ConsultaConstants.TempoConsultaEmMinutos)).ToList(),
+                DayOfWeek.Wednesday => Enumerable.Range(0, ((int)(horarioExpediente.FimQuarta - horarioExpediente.InicioQuarta).TotalMinutes / ConsultaConstants.TempoConsultaEmMinutos) + 1)
+                                  .Select(i => horarioExpediente.InicioQuarta.AddMinutes(i * ConsultaConstants.TempoConsultaEmMinutos)).ToList(),
+                DayOfWeek.Thursday => Enumerable.Range(0, ((int)(horarioExpediente.FimQuinta - horarioExpediente.InicioQuinta).TotalMinutes / ConsultaConstants.TempoConsultaEmMinutos) + 1)
+                                  .Select(i => horarioExpediente.InicioQuinta.AddMinutes(i * ConsultaConstants.TempoConsultaEmMinutos)).ToList(),
+                DayOfWeek.Friday => Enumerable.Range(0, ((int)(horarioExpediente.FimSexta - horarioExpediente.InicioSexta).TotalMinutes / ConsultaConstants.TempoConsultaEmMinutos) + 1)
+                                  .Select(i => horarioExpediente.InicioSexta.AddMinutes(i * ConsultaConstants.TempoConsultaEmMinutos)).ToList(),
+                DayOfWeek.Sunday => Enumerable.Range(0, ((int)(horarioExpediente.FimDomingo - horarioExpediente.InicioDomingo).TotalMinutes / ConsultaConstants.TempoConsultaEmMinutos) + 1)
+                                   .Select(i => horarioExpediente.InicioDomingo.AddMinutes(i * ConsultaConstants.TempoConsultaEmMinutos)).ToList(),
+                _ => new List<TimeOnly>()
+            };
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.OpenApi.Any;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
@@ -22,6 +23,12 @@ namespace HealthMed.AgendaConsulta.API.Configurations
                     Type = SecuritySchemeType.Http,
                     Scheme = "Bearer",
                     BearerFormat = "JWT",
+                });
+                c.MapType<TimeOnly>(() => new OpenApiSchema
+                {
+                    Type = "string",
+                    Format = "time",
+                    Example = new OpenApiString("00:00:00")
                 });
             });
         }

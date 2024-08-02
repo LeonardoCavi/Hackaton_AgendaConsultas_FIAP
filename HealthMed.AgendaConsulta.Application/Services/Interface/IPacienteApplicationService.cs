@@ -9,6 +9,6 @@ namespace HealthMed.AgendaConsulta.Application.Services.Interface
         Task<TokenAcesso> AutenticarPaciente(AutenticacaoViewModel autenticacao);
         Task CadastrarPaciente(CadastraPacienteViewModel medico);
         Task<List<BuscaMedicoViewModel>> BuscarMedicos(DateTime dia);
-        Task<string> AgendarConsulta(int id, AgendaConsultaViewModel agendaConsulta);
+        Task AgendarConsulta(int id, AgendaConsultaViewModel agendaConsulta);
     }
 }
