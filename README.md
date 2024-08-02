@@ -1,6 +1,8 @@
 <h1 align="left">[Hackaton] - Agendador de Consultas - 🧪Health&Med💉 - FIAP 2024 - Pós Tech</h1>
 😷 O projeto "Agendador de Consultas - Health&Med" é uma aplicação voltada para o cadastro e a gestão dos horários de trabalho de médicos e prestadores de serviços de saúde. Além disso, permite que os pacientes consultem a disponibilidade dos médicos para os dias e horários desejados e façam o agendamento de consultas, bloqueando a agenda do profissional. Ao final, o médico receberá uma notificação sobre o novo agendamento.
 
+<img width="300" src="https://github.com/LeonardoCavi/Hackaton_AgendaConsultas_FIAP/blob/developer/Documentos/Banco%20de%20Dados/gatinho-medico.png" alt="Gatinho Médico" align="center"></img>
+
 <h2 align="left">Integrantes</h3>
 - 🤢 <a href="https://github.com/talles2512">Hebert Talles de Jesus Silva</a> - RM352000 </br> 
 - 🤕 <a href="https://github.com/LeonardoCavi">Leonardo Cavichiolli de Oliveira</a> - RM351999 </br>
@@ -93,10 +95,8 @@ As informações sensíveis são armazenadas de forma segura no Azure Key Vault,
 
 <h4 align="left">🩹 Scripts de Banco de Dados</h4>
 ➤ Executar o seguinte script na base de dados.: 
-[Em Andamento...]</br>
-<a href="https://github.com/LeonardoCavi/TC4_CA_AudioGeraImagem_FIAP/tree/developer/Documenta%C3%A7%C3%B5es/Tabelas/script%20tabelas.sql">Script das Tabelas</a></br>
+<a href="https://github.com/LeonardoCavi/Hackaton_AgendaConsultas_FIAP/blob/developer/Documentos/Banco%20de%20Dados/script.sql">Script das Tabelas</a></br>
 
 <h4 align="left">🧼 Diagrama do banco de dados</h4>
-[Em Andamento...]</br>
-<img width="1200" src="https://github.com/LeonardoCavi/TC4_CA_AudioGeraImagem_FIAP/blob/developer/Documenta%C3%A7%C3%B5es/Tabelas/diagramaServices.png"></img>
+<img width="1200" src="https://github.com/LeonardoCavi/Hackaton_AgendaConsultas_FIAP/blob/developer/Documentos/Banco%20de%20Dados/diagrama%20tabelas.png"></img>
 
