@@ -11,8 +11,7 @@
 - 🩻 HealthMed.AgendaConsulta.API</br>
 
 <h2 align="left">🩼 Vídeo de Apresentação</h2>
-[Em Andamento...]</br>
-<a href="https://youtu.be/JwXN584B2cg">Apresentação do Projeto</a></br> 
+<a href="https://www.youtube.com/watch?v=ERQXNPA3bnY">Apresentação do Projeto</a></br> 
 
 <h2 align="left">Requisitos do Sistema do Projeto</h2>
 
