@@ -90,8 +90,6 @@
 
 Para o serviço de notificação, utilizamos dois recursos do Azure: Azure Communication Service para comunicação e Azure Email Communication Service para o envio de e-mails.
 
-As informações sensíveis são armazenadas de forma segura no Azure Key Vault, enquanto as configurações da aplicação são gerenciadas pelo Azure App Configuration.
-
 <h4 align="left">🩹 Scripts de Banco de Dados</h4>
 ➤ Executar o seguinte script na base de dados.: 
 <a href="https://github.com/LeonardoCavi/Hackaton_AgendaConsultas_FIAP/blob/developer/Documentos/Banco%20de%20Dados/script.sql">Script das Tabelas</a></br>
